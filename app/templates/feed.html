@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Live Feed{% endblock %}
+{% block header_title %}Live Intelligence Feed{% endblock %}
+
+{% block content %}
+<div class="card" style="padding: 1.5rem;">
+    <div class="feed-controls" style="margin-bottom: 1.5rem; display: flex; gap: 10px;">
+        <input type="text" id="feed-search" placeholder="Search articles..."
+            style="padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-dark); color: white; flex: 1;">
+        <select id="feed-filter"
+            style="padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-dark); color: white;">
+            <option value="all">All Impacts</option>
+            <option value="High Risk">High Risk</option>
+            <option value="Risk">Risk</option>
+            <option value="Opportunity">Opportunity</option>
+            <option value="High Opportunity">High Opportunity</option>
+        </select>
+    </div>
+    <div class="feed-container" id="full-feed-container">
+        <div class="loading">Loading full feed...</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('full-feed-container');
+        const searchInput = document.getElementById('feed-search');
+        const filterSelect = document.getElementById('feed-filter');
+
+        let allData = [];
+
+        try {
+            const response = await fetch('/api/data');
+            allData = await response.json();
+            renderFeed(allData);
+        } catch (error) {
+            container.innerHTML = '<p>Error loading feed.</p>';
+        }
+
+        function renderFeed(data) {
+            container.innerHTML = '';
+            if (data.length === 0) {
+                container.innerHTML = '<p>No articles found.</p>';
+                return;
+            }
+
+            // Sort by date or impact
+            const sorted = data.sort((a, b) => Math.abs(b.impact_score) - Math.abs(a.impact_score));
+
+            sorted.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'feed-item';
+                const impactClass = `impact-${item.impact_level.toLowerCase().replace(' ', '-')}`;
+
+                div.innerHTML = `
+                    <div class="feed-header">
+                        <span class="source-badge">${item.Source}</span>
+                        <span class="impact-badge ${impactClass}">${item.impact_level}</span>
+                    </div>
+                    <div class="feed-title">${item.Title}</div>
+                    <div class="feed-summary">${item.Summary}</div>
+                    <div class="feed-footer">
+                        <div class="tags">
+                            <span class="tag">${item.operational_tag}</span>
+                            ${item.event_flag !== 'Normal' ? `<span class="tag" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b;">${item.event_flag}</span>` : ''}
+                        </div>
+                        <a href="${item.Link}" target="_blank" style="color: var(--accent); text-decoration: none;"><i class="fa-solid fa-external-link-alt"></i></a>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function filterData() {
+            const term = searchInput.value.toLowerCase();
+            const filter = filterSelect.value;
+
+            const filtered = allData.filter(item => {
+                const matchesSearch = item.Title.toLowerCase().includes(term) || item.Summary.toLowerCase().includes(term);
+                const matchesFilter = filter === 'all' || item.impact_level === filter;
+                return matchesSearch && matchesFilter;
+            });
+            renderFeed(filtered);
+        }
+
+        searchInput.addEventListener('input', filterData);
+        filterSelect.addEventListener('change', filterData);
+    });
+</script>
+{% endblock %}

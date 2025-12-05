@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<section class="stats-grid">
+    <div class="card stat-card">
+        <div class="icon-box risk"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div class="stat-info">
+            <h3>High Risk</h3>
+            <p id="stat-risk">--</p>
+        </div>
+    </div>
+    <div class="card stat-card">
+        <div class="icon-box opportunity"><i class="fa-solid fa-arrow-trend-up"></i></div>
+        <div class="stat-info">
+            <h3>Opportunities</h3>
+            <p id="stat-opportunity">--</p>
+        </div>
+    </div>
+    <div class="card stat-card">
+        <div class="icon-box event"><i class="fa-solid fa-bell"></i></div>
+        <div class="stat-info">
+            <h3>Major Events</h3>
+            <p id="stat-events">--</p>
+        </div>
+    </div>
+    <div class="card stat-card">
+        <div class="icon-box total"><i class="fa-solid fa-newspaper"></i></div>
+        <div class="stat-info">
+            <h3>Total Articles</h3>
+            <p id="stat-total">--</p>
+        </div>
+    </div>
+</section>
+
+<section class="dashboard-grid">
+    <div class="card chart-card">
+        <h2>Impact Distribution</h2>
+        <canvas id="impactChart"></canvas>
+    </div>
+    <div class="card chart-card">
+        <h2>Operational Categories</h2>
+        <canvas id="opsChart"></canvas>
+    </div>
+</section>
+
+<section class="feed-section">
+    <h2><i class="fa-solid fa-bolt"></i> Recent Intelligence</h2>
+    <div class="feed-container" id="feed-container">
+        <!-- Feed items will be injected here -->
+        <div class="loading">Loading data...</div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Dashboard specific logic is already in main.js, but we might need to scope it if we split pages.
+    // For now, main.js handles the dashboard elements if they exist.
+</script>
+{% endblock %}

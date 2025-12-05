@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block title %}Settings{% endblock %}
+{% block header_title %}System Settings{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 600px; margin: 0 auto;">
+    <h2 style="margin-bottom: 1.5rem;">Scheduler Configuration</h2>
+
+    <div style="margin-bottom: 2rem;">
+        <label for="interval" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Update
+            Interval (Minutes)</label>
+        <div style="display: flex; gap: 10px;">
+            <input type="number" id="interval" min="5" max="1440" value="15"
+                style="padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-dark); color: white; flex: 1;">
+            <button id="save-btn"
+                style="background: var(--accent); border: none; padding: 10px 20px; border-radius: 6px; color: white; cursor: pointer; font-weight: 600;">Save
+                & Apply</button>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Minimum 5 minutes. Changes apply
+            immediately.</p>
+    </div>
+
+    <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 2rem;">
+        <h2 style="margin-bottom: 1.5rem;">Model Configuration</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Select the AI model used for
+            clustering and analysis. Models are downloaded from Hugging Face.</p>
+
+        <div style="margin-bottom: 1.5rem;">
+            <label for="model-select"
+                style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Select
+                Model</label>
+            <div style="display: flex; gap: 10px;">
+                <select id="model-select"
+                    style="padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-dark); color: white; flex: 1;">
+                    <option value="" disabled selected>Loading models...</option>
+                </select>
+                <button id="load-model-btn"
+                    style="background: var(--accent); border: none; padding: 10px 20px; border-radius: 6px; color: white; cursor: pointer; font-weight: 600;">Load
+                    Model</button>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span style="color: var(--text-secondary);">Current Model:</span>
+                <span id="current-model-name" style="color: white; font-weight: 600;">--</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-secondary);">Status:</span>
+                <span id="model-status" style="color: var(--text-secondary);">Checking...</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 2rem;">
+        <h3 style="margin-bottom: 1rem;">System Status</h3>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <span style="color: var(--text-secondary);">Scheduler Status:</span>
+            <span style="color: var(--opportunity);">Running</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-secondary);">Next Run:</span>
+            <span id="next-run">Calculating...</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const intervalInput = document.getElementById('interval');
+        const saveBtn = document.getElementById('save-btn');
+        const nextRunSpan = document.getElementById('next-run');
+
+        // Model elements
+        const modelSelect = document.getElementById('model-select');
+        const loadModelBtn = document.getElementById('load-model-btn');
+        const currentModelName = document.getElementById('current-model-name');
+        const modelStatus = document.getElementById('model-status');
+
+        // Load Scheduler Settings
+        try {
+            const response = await fetch('/api/settings');
+            const data = await response.json();
+            if (data.interval) {
+                intervalInput.value = data.interval;
+            }
+            if (data.next_run) {
+                nextRunSpan.textContent = data.next_run;
+            }
+        } catch (error) {
+            console.error('Error loading settings:', error);
+        }
+
+        // Load Model Info
+        async function updateModelInfo() {
+            try {
+                const response = await fetch('/api/model');
+                const data = await response.json();
+
+                currentModelName.textContent = data.current_model;
+                modelStatus.textContent = data.status;
+
+                // Color code status
+                if (data.status === 'Ready') {
+                    modelStatus.style.color = 'var(--opportunity)';
+                    loadModelBtn.disabled = false;
+                    loadModelBtn.textContent = 'Load Model';
+                } else if (data.status.startsWith('Loading')) {
+                    modelStatus.style.color = 'var(--event)';
+                    loadModelBtn.disabled = true;
+                    loadModelBtn.textContent = 'Loading...';
+                } else if (data.status.startsWith('Error')) {
+                    modelStatus.style.color = 'var(--risk)';
+                }
+
+                // Populate dropdown if empty
+                if (modelSelect.options.length <= 1) {
+                    modelSelect.innerHTML = '';
+                    data.available_models.forEach(m => {
+                        const opt = document.createElement('option');
+                        opt.value = m;
+                        opt.textContent = m;
+                        if (m === data.current_model) opt.selected = true;
+                        modelSelect.appendChild(opt);
+                    });
+                }
+
+            } catch (error) {
+                console.error('Error loading model info:', error);
+            }
+        }
+
+        updateModelInfo();
+        // Poll status every 2 seconds if loading
+        setInterval(() => {
+            if (modelStatus.textContent.startsWith('Loading')) {
+                updateModelInfo();
+            }
+        }, 2000);
+
+        // Save Scheduler
+        saveBtn.addEventListener('click', async () => {
+            const val = parseInt(intervalInput.value);
+            if (val < 5) {
+                alert('Minimum interval is 5 minutes.');
+                return;
+            }
+
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Saving...';
+
+            try {
+                const response = await fetch('/api/settings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ interval: val })
+                });
+                const res = await response.json();
+
+                if (res.status === 'success') {
+                    alert('Settings saved. Scheduler updated.');
+                    if (res.next_run) {
+                        nextRunSpan.textContent = res.next_run;
+                    }
+                } else {
+                    alert('Error: ' + res.message);
+                }
+            } catch (error) {
+                alert('Error saving settings.');
+            } finally {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save & Apply';
+            }
+        });
+
+        // Load Model
+        loadModelBtn.addEventListener('click', async () => {
+            const selectedModel = modelSelect.value;
+            if (!selectedModel) return;
+
+            if (!confirm(`Are you sure you want to load "${selectedModel}"? This may take a while to download.`)) return;
+
+            loadModelBtn.disabled = true;
+            loadModelBtn.textContent = 'Requesting...';
+
+            try {
+                const response = await fetch('/api/model', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ model_name: selectedModel })
+                });
+                const res = await response.json();
+
+                if (res.status === 'success') {
+                    updateModelInfo();
+                } else {
+                    alert('Error: ' + res.message);
+                    updateModelInfo();
+                }
+            } catch (error) {
+                alert('Error requesting model load.');
+                updateModelInfo();
+            }
+        });
+    });
+</script>
+{% endblock %}
