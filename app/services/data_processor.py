@@ -6,6 +6,7 @@ from nltk.corpus import stopwords
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
+from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 import os
 import logging
@@ -16,11 +17,11 @@ logger = logging.getLogger(__name__)
 
 # Constants and Configuration
 SEO_PRIORITY = {
-    "Ada Derana": 10, "Daily Mirror": 10, "Lankadeepa": 9, "The Island": 8,
-    "Divaina": 8, "Thinakaran": 8, "Sunday Times": 8, "Dinamina": 7,
-    "Virakesari": 7, "Daily News": 6, "Silumina": 6, "EconomyNext": 5,
-    "FT.LK": 4, "LankaBusinessOnline": 3, "News.lk": 2, "Ceylon Today": 1,
-    "ITN News": 1, "Onlanka.com": 1
+    "Ada Derana": 5.17, "Daily Mirror": 7.47, "Lankadeepa": 6.78, "The Island": 6.38,
+    "Divaina": 6.65, "Thinakaran": 5.5, "Sunday Times": 5.95, "Dinamina": 5.9,
+    "Virakesari": 5.72, "Daily News": 5.8, "Silumina": 5.58, "EconomyNext": 6.65,
+    "FT.LK": 6.58, "LankaBusinessOnline": 6.92, "News.lk": 6.4, "Ceylon Today": 5.75,
+    "ITN News": 7.42, "Onlanka.com": 6.45
 }
 
 RSS_FEEDS = {
@@ -46,66 +47,437 @@ RSS_FEEDS = {
 
 LEXICON = {
     # NEGATIVE (RISK)
-    "disaster": -3, "flood": -3, "cyclone": -3, "earthquake": -3, "landslide": -3,
-    "crisis": -3, "evacuation": -3, "fire": -3, "storm": -3, "tornado": -3,
-    "hazard": -3, "accident": -3, "casualty": -3, "fatality": -3, "collapse": -3,
-    "chaos": -3, "riot": -3, "civil_unrest": -3, "structural_failure": -3,
-    "danger": -3, "displaced": -3, "pandemic": -3, "epidemic": -3,
-    "disease_outbreak": -3, "dies": -3, "died": -3, "death": -3, "dead": -3,
-    "quarantine": -2, "outage": -2, "power_cut": -2, "transport_strike": -2,
-    "road_accident": -2, "fuel_shortage": -2, "water_shortage": -2,
-    "pollution_alert": -2, "traffic_disruption": -2, "inflation": -2, "loss": -2,
-    "tourism_decline": -2, "health_alert": -2, "infection": -2,
-    "infection_rate": -2, "congestion": -1, "power_outage": -2,
-    "galle_bridge_collapse": -3, "colombo_airport_delay": -2, "attack": -3,
-    "crime": -2, "arrest": -2, "terror": -3, "violence": -3, "conflict": -3,
-    "robbery": -2, "burglary": -2, "assault": -2, "kidnap": -3, "hijack": -3,
-    "illegal_activity": -2, "law_violation": -2, "risk_alert": -1, "threat": -2,
-    "pollution": -2, "air_quality": -2, "climate_change": -1,
-    "colombo_flood": -3, "kandy_protest": -2, "galle_traffic": -1,
-    "negombo_storm": -2, "anuradhapura_drought": -2, "panadura_flood": -3,
-    "kurunegala_traffic": -1, "matara_flood": -3, "colombo_protest": -2,
-    "economic_crash": -3, "inflation_spike": -3, "currency_devaluation": -3,
+    "disaster": -3,
+    "flood": -3,
+    "cyclone": -3,
+    "earthquake": -3,
+    "landslide": -3,
+    "crisis": -3,
+    "evacuation": -3,
+    "fire": -3,
+    "storm": -3,
+    "tornado": -3,
+    "hazard": -3,
+    "accident": -3,
+    "casualty": -3,
+    "fatality": -3,
+    "collapse": -3,
+    "chaos": -3,
+    "riot": -3,
+    "civil_unrest": -3,
+    "structural_failure": -3,
+    "danger": -3,
+    "displaced": -3,
+    "pandemic": -3,
+    "epidemic": -3,
+    "disease_outbreak": -3,
+    "dies": -3,
+    "died": -3,
+    "death": -3,
+    "dead": -3,
+    "drought": -3,
+    "tsunami": -3,
+    "mudslide": -3,
+    "wildfire": -3,
+    "monsoon_damage": -3,
+    
+    # Health & Safety Risks
+    "quarantine": -2,
+    "health_alert": -2,
+    "infection": -2,
+    "infection_rate": -2,
+    "dengue": -2,
+    "malaria": -2,
+    "cholera": -2,
+    "contamination": -2,
+    "poisoning": -2,
+    "outbreak": -2,
+    "virus": -2,
+    "contagious": -2,
+    "hospital_overcrowding": -2,
+    "medical_emergency": -2,
+    
+    # Infrastructure & Utilities
+    "outage": -2,
+    "power_cut": -2,
+    "power_outage": -2,
+    "blackout": -2,
+    "water_shortage": -2,
+    "water_cut": -2,
+    "fuel_shortage": -2,
+    "gas_shortage": -2,
+    "supply_disruption": -2,
+    "service_interruption": -2,
+    "breakdown": -2,
+    "malfunction": -2,
+    "infrastructure_damage": -2,
+    
+    # Transport & Traffic
+    "transport_strike": -2,
+    "road_accident": -2,
+    "traffic_disruption": -2,
+    "congestion": -1,
+    "traffic_jam": -1,
+    "road_closure": -2,
+    "train_delay": -1,
+    "bus_strike": -2,
+    "airport_closure": -2,
+    "flight_cancellation": -1,
+    "port_closure": -2,
+    
+    # Economic Risks
+    "inflation": -2,
+    "loss": -2,
+    "recession": -3,
+    "economic_crash": -3,
+    "inflation_spike": -3,
+    "currency_devaluation": -3,
+    "bankruptcy": -3,
+    "debt_crisis": -3,
+    "default": -3,
+    "financial_crisis": -3,
+    "market_crash": -3,
+    "unemployment": -2,
+    "layoff": -2,
+    "job_loss": -2,
+    "poverty": -2,
+    "economic_decline": -2,
+    "budget_deficit": -2,
+    "tax_increase": -2,
+    "price_hike": -2,
+    "cost_increase": -2,
+    
+    # Tourism & Business
+    "tourism_decline": -2,
+    "business_closure": -2,
+    "factory_shutdown": -2,
+    "production_halt": -2,
+    "export_decline": -2,
+    "revenue_drop": -2,
+    "profit_decline": -2,
+    
+    # Environmental
+    "pollution": -2,
+    "air_quality": -2,
+    "climate_change": -1,
+    "deforestation": -2,
+    "environmental_damage": -2,
+    "toxic": -2,
+    "waste_crisis": -2,
+    
+    # Security & Crime
+    "attack": -3,
+    "crime": -2,
+    "arrest": -2,
+    "terror": -3,
+    "terrorism": -3,
+    "violence": -3,
+    "conflict": -3,
+    "robbery": -2,
+    "burglary": -2,
+    "assault": -2,
+    "kidnap": -3,
+    "hijack": -3,
+    "illegal_activity": -2,
+    "law_violation": -2,
+    "threat": -2,
+    "murder": -3,
+    "shooting": -3,
+    "bombing": -3,
+    "explosion": -3,
+    "sabotage": -2,
+    "vandalism": -2,
+    "theft": -2,
+    "fraud": -2,
+    "corruption": -2,
+    "bribery": -2,
+    
+    # Political & Social Unrest
+    "protest": -2,
+    "demonstration": -1,
+    "strike": -2,
+    "boycott": -2,
+    "political_crisis": -3,
+    "government_collapse": -3,
+    "resignation": -2,
+    "impeachment": -2,
+    "scandal": -2,
+    "controversy": -1,
+    "dispute": -1,
+    "tension": -1,
+    
+    # Location-Specific Risks (Sri Lankan cities)
+    "colombo_flood": -3,
+    "kandy_protest": -2,
+    "galle_traffic": -1,
+    "negombo_storm": -2,
+    "anuradhapura_drought": -2,
+    "panadura_flood": -3,
+    "kurunegala_traffic": -1,
+    "matara_flood": -3,
+    "colombo_protest": -2,
+    "galle_bridge_collapse": -3,
+    "colombo_airport_delay": -2,
+    "jaffna_unrest": -2,
+    "trincomalee_conflict": -2,
+    
+    # Risk Indicators
+    "risk_alert": -1,
+    "warning": -1,
+    "emergency": -2,
+    "urgent": -1,
+    "critical": -2,
+    "severe": -2,
+    "serious": -1,
+    "concern": -1,
+    "issue": -1,
+    "problem": -1,
+    "failure": -2,
+    "damage": -2,
+    "destruction": -3,
+    "devastation": -3,
 
-    # POSITIVE (OPPORTUNITY)
-    "donation": 2, "aid": 2, "relief": 2, "funding": 2, "charity": 2,
-    "assistance": 2, "grant": 2, "shelter": 2, "medical_support": 2,
-    "rescue_team": 2, "volunteer": 2, "food_distribution": 2,
-    "emergency_fund": 2, "rebuilding": 2, "recovery": 2, "rehabilitation": 2,
-    "community_help": 2, "ngo_project": 2, "initiative": 1, "announcement": 1,
-    "resolution": 1, "strategy": 1, "policy_update": 1, "regulatory_change": 1,
-    "government_order": 1, "investment": 2, "trade": 2, "profit": 2, "revenue": 2,
-    "export": 2, "business_growth": 2, "economic_upturn": 2, "startup": 2,
-    "entrepreneurship": 2, "capital": 2, "business_expansion": 2,
-    "project_funding": 2, "contract_award": 2, "economic_forecast": 1,
-    "profit_max": 3, "booming": 3, "resilient_economy": 3, "tea_export": 2,
-    "garment_industry": 2, "tourism_growth": 2, "foreign_investment": 2,
-    "industrial_development": 2, "business_partnership": 2, "market_expansion": 2,
-    "revenue_increase": 3, "profit_record": 3, "disease_control": 2,
-    "healthcare_improvement": 2, "medical_facility_upgrade": 2,
-    "infrastructure_development": 2, "infrastructure_upgrade": 2,
-    "project_completion": 2, "energy_supply": 2, "utility_service": 1,
-    "patrol": 1, "public_safety": 1, "conservation": 2, "reforestation": 2,
-    "sustainable_development": 2, "social_initiative": 2, "youth_program": 2,
-    "community_project": 2, "awareness_campaign": 1, "gender_equality": 2,
-    "poverty_alleviation": 2, "cultural_event": 1, "heritage": 1,
-    "volunteering": 2, "public_participation": 2, "environmental_protection": 2,
-    "ratnapura_tea_export": 2, "tea_export_success": 2,
-    "garment_factory_opening": 2, "tourism_peak": 2, "foreign_aid_received": 2,
-    "infrastructure_grant": 2, "startup_funding": 2
+    # POSITIVE (OPPORTUNITY) - Aid & Relief
+    "donation": 2,
+    "aid": 3,
+    "restoration": 3,
+    "restore":3,
+    "relief": 2,
+    "funding": 2,
+    "charity": 2,
+    "assistance": 2,
+    "grant": 2,
+    "shelter": 2,
+    "medical_support": 2,
+    "support": 2,
+    "rescue_team": 2,
+    "volunteer": 2,
+    "food_distribution": 2,
+    "emergency_fund": 2,
+    "rebuilding": 2,
+    "recovery": 3,
+    "rehabilitation": 2,
+    "community_help": 2,
+    "ngo_project": 2,
+    "humanitarian_aid": 2,
+    "disaster_relief": 2,
+    
+    # Economic Opportunities
+    "investment": 2,
+    "trade": 2,
+    "profit": 2,
+    "revenue": 2,
+    "export": 2,
+    "business_growth": 2,
+    "economic_upturn": 2,
+    "economic_growth": 2,
+    "startup": 2,
+    "entrepreneurship": 2,
+    "capital": 2,
+    "business_expansion": 2,
+    "project_funding": 2,
+    "contract_award": 2,
+    "economic_forecast": 1,
+    "profit_max": 3,
+    "booming": 3,
+    "resilient_economy": 3,
+    "gdp_growth": 2,
+    "foreign_exchange": 2,
+    "remittance": 2,
+    "revenue_increase": 3,
+    "profit_record": 3,
+    "market_expansion": 2,
+    "business_partnership": 2,
+    "job_creation": 2,
+    "employment": 2,
+    "salary_increase": 2,
+    "wage_growth": 2,
+    
+    # Industry & Trade (Sri Lankan context)
+    "tea_export": 2,
+    "garment_industry": 2,
+    "tourism_growth": 2,
+    "foreign_investment": 2,
+    "industrial_development": 2,
+    "ratnapura_tea_export": 2,
+    "tea_export_success": 2,
+    "garment_factory_opening": 2,
+    "tourism_peak": 2,
+    "foreign_aid_received": 2,
+    "infrastructure_grant": 2,
+    "startup_funding": 2,
+    "spice_export": 2,
+    "coconut_export": 2,
+    "rubber_export": 2,
+    "fisheries_growth": 2,
+    "agriculture_development": 2,
+    "manufacturing_growth": 2,
+    "it_sector_growth": 2,
+    "technology_investment": 2,
+    
+    # Infrastructure & Development
+    "infrastructure_development": 2,
+    "infrastructure_upgrade": 2,
+    "project_completion": 2,
+    "energy_supply": 2,
+    "utility_service": 1,
+    "road_construction": 2,
+    "highway_opening": 2,
+    "bridge_construction": 2,
+    "port_development": 2,
+    "airport_expansion": 2,
+    "railway_modernization": 2,
+    "power_plant": 2,
+    "renewable_energy": 2,
+    "solar_project": 2,
+    "wind_energy": 2,
+    "hydropower": 2,
+    
+    # Health & Medical
+    "disease_control": 2,
+    "healthcare_improvement": 2,
+    "medical_facility_upgrade": 2,
+    "hospital_expansion": 2,
+    "vaccination_campaign": 2,
+    "health_program": 2,
+    "medical_breakthrough": 2,
+    "treatment_success": 2,
+    
+    # Social & Community
+    "conservation": 2,
+    "reforestation": 2,
+    "sustainable_development": 2,
+    "social_initiative": 2,
+    "youth_program": 2,
+    "community_project": 2,
+    "awareness_campaign": 1,
+    "gender_equality": 2,
+    "poverty_alleviation": 2,
+    "cultural_event": 1,
+    "heritage": 1,
+    "volunteering": 2,
+    "public_participation": 2,
+    "environmental_protection": 2,
+    "education_program": 2,
+    "scholarship": 2,
+    "skill_development": 2,
+    "training_program": 2,
+    
+    # Governance & Policy
+    "flexibility": 2,
+    "initiative": 1,
+    "announcement": 1,
+    "resolution": 1,
+    "strategy": 1,
+    "policy_update": 1,
+    "regulatory_change": 1,
+    "government_order": 1,
+    "reform": 2,
+    "legislation": 1,
+    "approval": 1,
+    "agreement": 2,
+    "treaty": 2,
+    "partnership": 2,
+    "collaboration": 2,
+    "cooperation": 2,
+    "permission": 3,
+    "granted":2,
+    # Security & Safety
+    "patrol": 1,
+    "public_safety": 1,
+    "security_enhancement": 2,
+    "peacekeeping": 2,
+    "stability": 2,
+    "law_enforcement": 1,
+    
+    # Positive Indicators
+    "success": 2,
+    "achievement": 2,
+    "progress": 2,
+    "improvement": 2,
+    "advancement": 2,
+    "innovation": 2,
+    "breakthrough": 2,
+    "milestone": 2,
+    "victory": 2,
+    "win": 2,
+    "award": 2,
+    "recognition": 2,
+    "excellence": 2,
+    "quality": 1,
+    "efficiency": 1,
+    "productivity": 2,
+    "performance": 1,
+    "growth": 2,
+    "expansion": 2,
+    "development": 2,
+    "upgrade": 2,
+    "modernization": 2,
+    "transformation": 2,
+    "provide":2,
+    "launched":3,
 }
 
 OPERATIONAL_KEYWORDS = {
-    "weather": ["flood", "storm", "cyclone", "landslide"],
-    "transport": ["traffic", "accident", "train", "bus delay"],
-    "utilities": ["outage", "power", "water cut"],
-    "health": ["disease", "infection", "hospital"],
-    "security": ["crime", "arrest", "violence", "attack"],
-    "economic": ["inflation", "investment", "trade", "market"]
+    "weather": [
+        "flood", "storm", "cyclone", "landslide", "rain", "drought", "monsoon", 
+        "weather", "forecast", "climate", "reservoir", "dam", "water level", 
+        "irrigation", "rainfall", "atmospheric", "meteorological", "temperature", 
+        "heat", "wind", "warning", "alert", "disaster", "natural hazard", 
+        "tsunami", "earthquake", "humidity", "precipitation"
+    ],
+    "transport": [
+        "traffic", "accident", "train", "bus", "highway", "road", "railway", 
+        "airport", "flight", "transport", "vehicle", "locomotive", "station", 
+        "port", "shipping", "cargo", "freight", "airline", "aviation", "driver", 
+        "passenger", "commute", "expressway", "bridge", "tunnel", "logistics", 
+        "fleet", "transit", "ticket", "departure", "arrival", "collision"
+    ],
+    "energy": [
+        "outage", "power", "water cut", "fuel", "gas", "electricity", "energy", 
+        "oil", "petrol", "diesel", "utility", "grid", "ceb", "cpc", "renewable", 
+        "solar", "wind power", "hydro", "coal", "plant", "refinery", "cylinder", 
+        "shortage", "tariff", "bill", "generation", "breakdown", "maintenance", 
+        "supply", "kerosene", "litro", "laugfs", "station"
+    ],
+    "health": [
+        "disease", "infection", "hospital", "medical", "health", "virus", 
+        "pandemic", "dengue", "medicine", "doctor", "nurse", "clinic", "patient", 
+        "treatment", "drug", "pharmaceutical", "vaccine", "surgery", "emergency", 
+        "ambulance", "ministry of health", "nutrition", "wellness", "mental health", 
+        "sanitation", "hygiene", "epidemic", "fever", "cancer", "diabetes"
+    ],
+    "security": [
+        "crime", "arrest", "violence", "attack", "police", "military", "security", 
+        "defense", "navy", "army", "court", "legal", "law", "enforcement", 
+        "custody", "prison", "jail", "suspect", "investigation", "cid", "air force", 
+        "troops", "border", "smuggling", "illegal", "operation", "weapon", "drug bust",
+        "narcotics", "terrorism", "intelligence", "officer"
+    ],
+    "economic": [
+        "inflation", "investment", "trade", "market", "stock", "currency", 
+        "rupee", "bank", "interest rate", "economy", "finance", "tax", "budget", 
+        "gdp", "cpi", "colombo stock exchange", "cse", "shares", "bond", "treasury", 
+        "debt", "loan", "imf", "world bank", "central bank", "cbsl", "export", 
+        "import", "customs", "tariff", "duty", "salary", "wage", "price", "cost", 
+        "business", "industry", "profit", "loss", "funding"
+    ],
+    "sentiment": [
+        "protest", "public opinion", "social media", "trend", "viral", "sentiment", 
+        "outcry", "campaign", "boycott", "strike", "demonstration",
+        "poll", "survey", "election", "vote", "voter", "community", "social", 
+        "society", "civil", "rights", "activist", "union", "opposition", 
+        "demand", "petition", "complaint", "feedback", "review", "comment", 
+        "discussion", "debate", "speech", "rally", "march", "gathering",
+        "movement", "public", "people", "citizens", "population",
+        "government", "president", "minister", "parliament", "policy",
+        "issue", "concern", "crisis", "develop", "situation", "matter"
+    ]
 }
 
 # Normalize lexicon
 NORM_LEX = {k.replace("_", " "): v for k, v in LEXICON.items()}
+
 
 # Initial setup for NLTK
 try:
@@ -304,6 +676,40 @@ def run_pipeline(data_dir="data"):
             return "Normal"
 
     df["event_flag"] = df["topic_cluster"].apply(detect_event)
+
+    # Automated Cluster Naming
+    try:
+        def generate_cluster_names(df):
+            if df.empty: return {}
+            
+            # Group text by cluster
+            grouped = df.groupby('topic_cluster')['cleaned'].apply(lambda x: " ".join(x)).reset_index()
+            
+            # TF-IDF
+            tfidf = TfidfVectorizer(stop_words='english', max_features=100)
+            tfidf_matrix = tfidf.fit_transform(grouped['cleaned'])
+            feature_names = np.array(tfidf.get_feature_names_out())
+            
+            cluster_names = {}
+            for i, row in grouped.iterrows():
+                cluster_id = row['topic_cluster']
+                # Get top 3 keywords
+                top_indices = tfidf_matrix[i].toarray().flatten().argsort()[::-1][:3]
+                keywords = feature_names[top_indices]
+                # Capitalize keywords
+                name = ", ".join([k.title() for k in keywords])
+                cluster_names[cluster_id] = name
+            
+            return cluster_names
+
+        name_map = generate_cluster_names(df)
+        df["cluster_name"] = df["topic_cluster"].map(name_map)
+        # Fallback if map fails
+        df["cluster_name"] = df["cluster_name"].fillna("General")
+        
+    except Exception as e:
+        logger.error(f"Error generating cluster names: {e}")
+        df["cluster_name"] = "Cluster " + df["topic_cluster"].astype(str)
 
     # Save final result
     output_path = os.path.join(data_dir, "final_data.csv")

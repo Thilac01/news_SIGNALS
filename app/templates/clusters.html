@@ -43,6 +43,8 @@
                 card.style.background = 'var(--bg-card)';
 
                 // Find a representative title (e.g., the first one)
+                // Use the backend-generated cluster name if available, else fallback
+                const clusterName = items[0].cluster_name || `Cluster #${cid}`;
                 const title = items[0].Title;
 
                 // Check for event flag
@@ -51,7 +53,7 @@
 
                 card.innerHTML = `
                     <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                        <h3 style="font-size: 1.1rem; color: var(--accent);">Cluster #${cid}</h3>
+                        <h3 style="font-size: 1.1rem; color: var(--accent);">${clusterName}</h3>
                         ${eventBadge}
                     </div>
                     <p style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 10px; font-weight: 600;">${title}...</p>

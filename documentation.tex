@@ -1,0 +1,193 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+
+\title{\textbf{News Signals: Real-time Situational Awareness Platform \\ Technical Documentation}}
+\author{News Signals Engineering Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+This document provides a comprehensive technical overview of the \textit{News Signals} platform. The system is designed to provide real-time situational awareness for the Sri Lankan context by aggregating, analyzing, and visualizing news data from multiple sources. It leverages Natural Language Processing (NLP) and Machine Learning (ML) to detect emerging events, assess risks, and map geographical hotspots.
+
+\section{System Architecture}
+The system follows a typical ETL (Extract, Transform, Load) pipeline architecture, integrated with a Flask web application for visualization.
+
+\subsection{Data Flow Pipeline}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+
+\node (in1) [io] {RSS Feeds (18+ Sources)};
+\node (pro1) [process, below of=in1] {Data Fetching \& Parsing};
+\node (pro2) [process, below of=pro1] {Text Preprocessing};
+\node (ml1) [process, below of=pro2] {Vector Embedding (Transformer)};
+\node (ml2) [process, below of=ml1] {Clustering (K-Means) \& Topic Modeling};
+\node (ml3) [process, below of=ml2] {Sentiment \& Risk Scoring};
+\node (out1) [io, below of=ml3] {Structured Data (CSV/JSON)};
+\node (vis) [startstop, below of=out1] {Dashboard Visualization};
+
+\draw [arrow] (in1) -- (pro1);
+\draw [arrow] (pro1) -- (pro2);
+\draw [arrow] (pro2) -- (ml1);
+\draw [arrow] (ml1) -- (ml2);
+\draw [arrow] (ml2) -- (ml3);
+\draw [arrow] (ml3) -- (out1);
+\draw [arrow] (out1) -- (vis);
+
+\end{tikzpicture}
+\end{center}
+
+\section{Data Processing \& Cleaning Logic}
+
+The data quality is paramount for accurate ML predictions. The raw RSS feed data undergoes a rigorous cleaning pipeline before any analysis.
+
+\subsection{Text Normalization}
+Raw HTML content is often noisy. We employ a multi-step normalization process:
+
+\begin{enumerate}
+    \item \textbf{HTML Stripping:} We use Regular Expressions to remove HTML tags.
+    \[
+    \text{Regex: } \texttt{<.*?>} \rightarrow \epsilon \text{ (empty string)}
+    \]
+    
+    \item \textbf{Noise Removal:} We remove special characters creating a cleaner corpus for the embedding model, retaining only alphanumeric characters and whitespace.
+    \[
+    \text{Regex: } \texttt{[\^{}a-z0-9\textbackslash s]} \rightarrow \text{" "}
+    \]
+    
+    \item \textbf{Stopword Removal:} We utilize the \texttt{NLTK} English stopword list to remove common low-information words (e.g., "the", "is", "at"). This reduces the dimensionality and noise for the TF-IDF and clustering steps.
+\end{enumerate}
+
+\subsection{Deduplication Strategy}
+To prevent skewing event detection statistics, we implement a two-stage deduplication:
+\begin{enumerate}
+    \item \textbf{Exact Match:} Rows with identical (Title, Link) pairs are dropped immediately.
+    \item \textbf{Content Match:} We create a "cleaned" column combining Title and Summary. We drop duplicates based on (Source, Cleaned\_Content) to ensure a single event isn't reported multiple times by the same source in slightly different formats.
+\end{enumerate}
+
+\section{Machine Learning \& NLP Algorithms}
+
+\subsection{Vector Embeddings (Transformer Model)}
+We leverage the \textbf{Sentence-BERT (SBERT)} framework, specifically the \texttt{all-MiniLM-L6-v2} model.
+
+\subsubsection{Why this model?}
+\begin{itemize}
+    \item \textbf{Architecture:} It is a distilled version of BERT, optimized for producing semantically meaningful sentence embeddings.
+    \item \textbf{Performance:} It maps sentences to a 384-dimensional dense vector space. It is designed such that similar sentences are close in vector space (using Cosine Similarity).
+    \item \textbf{Efficiency:} It is significantly faster than larger models (like \texttt{bert-base-uncased}), making it suitable for real-time CPU-based inference in this application.
+\end{itemize}
+
+\subsection{Unsupervised Clustering (K-Means)}
+We strictly use \textbf{Unsupervised Learning} to discover events without prior labeling.
+
+\subsubsection{Algorithm Details}
+We apply the K-Means algorithm to the 384-dimensional embedding vectors.
+\begin{itemize}
+    \item \textbf{K Selection:} The number of clusters $k$ is dynamic, defined as $k = \min(6, N)$, where $N$ is the number of articles. This ensures we don't force clusters on small datasets.
+    \item \textbf{Initialization:} We use \texttt{k-means++} ensuring smart centroid initialization to accelerate convergence.
+\end{itemize}
+
+\subsection{Automated Topic Naming (TF-IDF)}
+Once clusters are formed, we need human-readable labels. We use \textbf{TF-IDF (Term Frequency-Inverse Document Frequency)} to extract keywords derived from the cluster's content.
+
+For a cluster $C$, we concatenate all texts into a single document $D_c$. We compute the TF-IDF score for word $t$ in document $D_c$:
+\[
+\text{TF-IDF}(t, D_c) = \text{TF}(t, D_c) \times \log\left(\frac{N}{|\{d \in D : t \in d\}|}\right)
+\]
+We extract the top 3 terms with the highest TF-IDF scores to form the cluster label (e.g., "Economy, Imf, Debt"). This automatically highlights specific terms unique to that cluster compared to the rest of the corpus.
+
+\section{Scoring \& Signal Detection Logic}
+
+\subsection{Hybrid Sentiment Analysis}
+We employ a hybrid approach combining a pre-trained model with domain-specific heuristics.
+
+\subsubsection{1. VADER Sentiment}
+We use the VADER (Valence Aware Dictionary and sEntiment Reasoner) analyzer. It is rule-based and tuned for social media contexts, handling negations and boosters well.
+\[
+S_{vader} \in [-1.0, 1.0]
+\]
+
+\subsubsection{2. Domain Lexicon Scoring}
+We defined a custom dictionary \texttt{LEXICON} mapping critical keywords to integer scores.
+\begin{itemize}
+    \item \textbf{Critical Risk Terms:} e.g., "flood" (-3), "attack" (-3).
+    \item \textbf{Risk Indicators:} e.g., "warning" (-1), "delay" (-1).
+    \item \textbf{Opportunity Terms:} e.g., "investment" (+2), "aid" (+3).
+\end{itemize}
+
+The lexicon score $S_{lex}$ considers both unigrams (single words) and bigrams (phrases like "power cut").
+\[
+S_{lex} = \sum (\text{matches} \times \text{weight} \times \text{multiplier})
+\]
+\textit{Note: We apply a 2x multiplier for multi-word phrase matches to prioritize specific concepts over general words.}
+
+\subsubsection{3. Final Impact Score}
+The final score combines the model's general sentiment sense with our specific operational definitions:
+\[
+S_{total} = S_{vader} + S_{lex}
+\]
+\[
+S_{final} = \text{clip}(S_{total}, -10, 10)
+\]
+This score is then discretized into bins for the dashboard "Traffic Light" system:
+\begin{itemize}
+    \item \textbf{High Risk:} $[-12, -2]$
+    \item \textbf{Risk:} $(-2, -0.3]$
+    \item \textbf{Neutral:} $(-0.3, 0.5]$
+    \item \textbf{Opportunity:} $(0.5, 2]$
+    \item \textbf{High Opportunity:} $(2, 12]$
+\end{itemize}
+
+\subsection{Statistical Event Detection (Outlier Analysis)}
+To distinguish "Major Events" from regular news, we analyze the distribution of cluster sizes.
+
+Let $V = \{v_1, v_2, ..., v_k\}$ be the volumes (article counts) of each cluster.
+We calculate:
+\[
+\mu = \text{mean}(V), \quad \sigma = \text{std\_dev}(V)
+\]
+A cluster $c$ is flagged based on its volume $v_c$:
+\[
+\text{Flag} = 
+\begin{cases} 
+\text{"Major Event"} & \text{if } v_c > \mu + 1.5\sigma \\
+\text{"Emerging Event"} & \text{if } v_c > \mu + 0.75\sigma \\
+\text{"Normal"} & \text{otherwise}
+\end{cases}
+\]
+
+\section{Geospatial Entity Extraction}
+The location mapping does not use simple string matching alone; it uses \textbf{Named Entity Recognition (NER)}.
+
+\begin{enumerate}
+    \item \textbf{NER Model:} spaCy (\texttt{en\_core\_web\_sm}).
+    \item \textbf{Extraction:} We extract entities labeled \texttt{GPE} (Geopolitical Entity), \texttt{LOC}, and \texttt{FAC}.
+    \item \textbf{Resolution:} Extracted entities are compared against a geo-tagged dictionary of 45+ Sri Lankan cities using substring matching to robustly handle variations (e.g., "Colombo District" matches "Colombo").
+\end{enumerate}
+
+\end{document}

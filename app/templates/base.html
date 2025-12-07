@@ -32,6 +32,10 @@
                     <li class="{{ 'active' if request.endpoint == 'main.clusters' else '' }}">
                         <a href="{{ url_for('main.clusters') }}"><i class="fa-solid fa-layer-group"></i> Clusters</a>
                     </li>
+                    <li class="{{ 'active' if request.endpoint == 'main.location_map' else '' }}">
+                        <a href="{{ url_for('main.location_map') }}"><i class="fa-solid fa-map-location-dot"></i>
+                            Map</a>
+                    </li>
                     <li class="{{ 'active' if request.endpoint == 'main.raw_data' else '' }}">
                         <a href="{{ url_for('main.raw_data') }}"><i class="fa-solid fa-database"></i> Raw Data</a>
                     </li>
