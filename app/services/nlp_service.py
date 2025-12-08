@@ -109,10 +109,10 @@ def get_location_data():
     Fetch news articles from CSV and extract location frequency data
     
     Returns:
-        Dictionary with location data including coordinates and counts
+        Dictionary with location data including coordinates, counts, and related news
     """
-    # Reset counts
-    location_data = {loc: {"lat": data["lat"], "lon": data["lon"], "count": 0} 
+    # Reset counts and news list
+    location_data = {loc: {"lat": data["lat"], "lon": data["lon"], "count": 0, "news": []} 
                      for loc, data in SRI_LANKA_LOCATIONS.items()}
     
     if not os.path.exists(DATA_FILE):
@@ -126,21 +126,42 @@ def get_location_data():
         logger.error(f"Error reading data file: {e}")
         return location_data
     
-    # Counter for all extracted locations
-    all_locations = Counter()
-    
     # Process each article (Title + Summary)
     processed = 0
     for _, row in df.iterrows():
         try:
             text = str(row.get('Title', '')) + " " + str(row.get('Summary', ''))
+            article_info = {
+                "Title": row.get('Title'),
+                "Link": row.get('Link'),
+                "Source": row.get('Source'),
+                "Summary": row.get('Summary'),
+                "Date": row.get('Date')
+            }
             
-            # Extract locations
-            locations = extract_locations_from_text(text)
+            # Extract locations from this article
+            extracted_locations = extract_locations_from_text(text)
             
-            # Count each location once per article
-            for loc in set(locations):
-                all_locations[loc] += 1
+            # Find generic matches for this article
+            # We use a set to avoid adding the same article multiple times to the same location 
+            # (even if the location is mentioned multiple times in the text)
+            matched_locations_in_article = set()
+            
+            for extracted_loc in extracted_locations:
+                extracted_lower = extracted_loc.lower()
+                
+                for known_loc in SRI_LANKA_LOCATIONS.keys():
+                    known_lower = known_loc.lower()
+                    
+                    # Check for match (Exact or Substring)
+                    if known_lower == extracted_lower or \
+                       (known_lower in extracted_lower and len(extracted_lower) < len(known_lower) + 15):
+                        matched_locations_in_article.add(known_loc)
+            
+            # Update the global data with matches from this article
+            for loc in matched_locations_in_article:
+                location_data[loc]["count"] += 1
+                location_data[loc]["news"].append(article_info)
             
             processed += 1
             
@@ -149,37 +170,6 @@ def get_location_data():
             continue
     
     logger.info(f"Processed {processed} articles for locations")
-    
-    # Map extracted locations to known Sri Lankan locations
-    for extracted_loc, count in all_locations.items():
-        # Check for exact or partial matches
-        for known_loc in SRI_LANKA_LOCATIONS.keys():
-            # Avoid matching generic terms or sub-strings incorrectly (e.g., "Male" in "Matale")
-            # Using simple inclusion for now, but valid for most distinct city names
-            if known_loc.lower() in extracted_loc.lower().split() or extracted_loc.lower() == known_loc.lower():
-                location_data[known_loc]["count"] += count
-                # Break to avoid double counting if multiple matches (e.g. if we had "Colombo 1" matching "Colombo")
-                # But here we want to capture all, so keeping it simple. 
-                # Actually, better to just check if known_loc is a substring of extracted_loc
-    
-    # Improve matching:
-    # Iterate through each known location and see if it appears in any extracted text count
-    # Re-approach: The all_locations counter already has chunks.
-    # Let's clean the loop:
-    
-    for extracted_loc, count in all_locations.items():
-        extracted_lower = extracted_loc.lower()
-        for known_loc in SRI_LANKA_LOCATIONS.keys():
-            known_lower = known_loc.lower()
-            
-            # 1. Exact match
-            if known_lower == extracted_lower:
-                location_data[known_loc]["count"] += count
-            
-            # 2. Substring match (e.g. "Colombo District" -> "Colombo")
-            # ONLY if the extracted entity is likely a composite place name
-            elif known_lower in extracted_lower and len(extracted_lower) < len(known_lower) + 15:
-                 location_data[known_loc]["count"] += count
 
     # Filter out locations with zero counts for cleaner data
     filtered_data = {loc: data for loc, data in location_data.items() if data["count"] > 0}

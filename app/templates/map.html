@@ -229,6 +229,17 @@
         Heatmap shows frequency of location mentions in recent news articles
     </p>
 </div>
+
+<!-- News Detail Modal -->
+<div id="detail-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-title">Location News</h2>
+        <div id="modal-body">
+            <!-- Content injected by JS -->
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
@@ -241,6 +252,7 @@
     let map;
     let heatLayer;
     let markersLayer;
+    let locationDataCache = {};
 
     // Initialize map
     function initMap() {
@@ -262,6 +274,9 @@
 
         // Load initial data
         loadLocationData();
+
+        // Setup Modal Handlers
+        setupModalHandlers();
     }
 
     // Load location data from API
@@ -302,8 +317,9 @@
         markersLayer.clearLayers();
 
         const locations = data.all_locations || {};
+        locationDataCache = locations; // Store for modal
+
         const heatPoints = [];
-        const markers = [];
 
         // Process location data
         for (const [name, locData] of Object.entries(locations)) {
@@ -321,10 +337,24 @@
                     fillOpacity: 0.6
                 });
 
+                // Safe name for onclick string
+                const safeName = name.replace(/'/g, "\\'");
+
                 marker.bindPopup(`
                     <div class="location-popup">
                         <h3>${name}</h3>
                         <p>Mentions: <span class="count">${locData.count}</span></p>
+                        <button class="view-news-btn" onclick="openLocationModal('${safeName}')" style="
+                            background: var(--accent); 
+                            color: white; 
+                            border: none; 
+                            padding: 6px 12px; 
+                            border-radius: 4px; 
+                            cursor: pointer; 
+                            margin-top: 8px;
+                            font-size: 0.8rem;
+                            width: 100%;
+                        ">View News</button>
                     </div>
                 `);
 
@@ -392,5 +422,60 @@
     document.addEventListener('DOMContentLoaded', () => {
         initMap();
     });
+
+    // --- Modal Logic ---
+
+    function setupModalHandlers() {
+        const modal = document.getElementById('detail-modal');
+        const closeBtn = document.querySelector('.close-modal');
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+    // Exposed function to be called from popup
+    window.openLocationModal = function (locationName) {
+        const modal = document.getElementById('detail-modal');
+        const title = document.getElementById('modal-title');
+        const body = document.getElementById('modal-body');
+
+        const locData = locationDataCache[locationName];
+
+        title.innerHTML = `<i class="fa-solid fa-location-dot"></i> News from ${locationName}`;
+        body.innerHTML = ''; // Clear previous content
+
+        if (!locData || !locData.news || locData.news.length === 0) {
+            body.innerHTML = '<p style="color: var(--text-secondary); padding: 1rem;">No detailed news records found for this location.</p>';
+        } else {
+            locData.news.forEach(item => {
+                const div = document.createElement('div');
+                div.style.cssText = 'padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 8px; margin-bottom: 0.8rem; border: 1px solid var(--border);';
+
+                const dateStr = item.Date ? `<span style="font-size: 0.75rem; color: var(--text-secondary); margin-left: auto;">${item.Date}</span>` : '';
+
+                div.innerHTML = `
+                    <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.5rem;">
+                        <div style="font-weight: 600; font-size: 1rem; color: var(--text-primary); flex: 1;">${item.Title}</div>
+                        ${dateStr}
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">${item.Summary || 'No summary available.'}</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                        <span class="source-badge"><i class="fa-regular fa-newspaper"></i> ${item.Source || 'Unknown Source'}</span>
+                        ${item.Link ? `<a href="${item.Link}" target="_blank" style="color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 4px;">Read Full Article <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i></a>` : ''}
+                    </div>
+                `;
+                body.appendChild(div);
+            });
+        }
+
+        modal.style.display = "block";
+    }
 </script>
 {% endblock %}

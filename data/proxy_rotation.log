@@ -420,3 +420,61 @@
 [2025-12-07 21:04:17] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
 [2025-12-07 21:04:17] Rotated to new proxy from GitHub pool | Proxy: http://104.16.64.62:80
 [2025-12-07 21:26:55] Proxy rotation enabled via settings | Proxy: None
+[2025-12-08 05:40:42] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:40:44] Rotated to new proxy from GitHub pool | Proxy: http://45.22.209.157:8888
+[2025-12-08 05:40:44] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 05:41:06] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F34666D590>, 'Connection to 45.22.209.157 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:41:06] Rotated to new proxy from GitHub pool | Proxy: http://172.67.194.114:80
+[2025-12-08 05:41:07] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:07] Rotated to new proxy from GitHub pool | Proxy: http://156.225.72.51:80
+[2025-12-08 05:41:07] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:07] Rotated to new proxy from GitHub pool | Proxy: http://63.141.128.138:80
+[2025-12-08 05:41:09] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:09] Rotated to new proxy from GitHub pool | Proxy: http://104.17.234.57:80
+[2025-12-08 05:41:09] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:09] Rotated to new proxy from GitHub pool | Proxy: http://141.193.213.26:80
+[2025-12-08 05:41:10] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:10] Rotated to new proxy from GitHub pool | Proxy: http://184.168.47.77:80
+[2025-12-08 05:42:55] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:43:28] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:43:31] Rotated to new proxy from GitHub pool | Proxy: http://66.81.247.91:80
+[2025-12-08 05:43:31] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 05:43:34] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:34] Rotated to new proxy from GitHub pool | Proxy: http://45.131.6.15:80
+[2025-12-08 05:43:34] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:34] Rotated to new proxy from GitHub pool | Proxy: http://104.18.93.52:80
+[2025-12-08 05:43:34] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:34] Rotated to new proxy from GitHub pool | Proxy: http://199.34.228.104:80
+[2025-12-08 05:43:36] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:37] Rotated to new proxy from GitHub pool | Proxy: http://185.162.231.236:80
+[2025-12-08 05:43:37] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:37] Rotated to new proxy from GitHub pool | Proxy: http://104.21.124.223:80
+[2025-12-08 05:43:37] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:37] Rotated to new proxy from GitHub pool | Proxy: http://104.17.50.193:80
+[2025-12-08 05:43:39] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:39] Rotated to new proxy from GitHub pool | Proxy: http://66.235.200.223:80
+[2025-12-08 05:43:39] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:39] Rotated to new proxy from GitHub pool | Proxy: http://198.41.202.78:80
+[2025-12-08 05:43:40] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:40] Rotated to new proxy from GitHub pool | Proxy: http://138.186.155.2:1085
+[2025-12-08 05:46:39] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:46:41] Rotated to new proxy from GitHub pool | Proxy: http://31.12.75.44:80
+[2025-12-08 05:46:41] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 05:46:43] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:43] Rotated to new proxy from GitHub pool | Proxy: http://104.21.90.186:80
+[2025-12-08 05:46:43] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:43] Rotated to new proxy from GitHub pool | Proxy: http://45.131.7.208:80
+[2025-12-08 05:46:43] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:43] Rotated to new proxy from GitHub pool | Proxy: http://103.158.155.99:8080
+[2025-12-08 05:46:56] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DE39A907D0>, 'Connection to 103.158.155.99 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:46:56] Rotated to new proxy from GitHub pool | Proxy: http://185.162.231.90:80
+[2025-12-08 05:46:56] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:56] Rotated to new proxy from GitHub pool | Proxy: http://216.205.52.179:80
+[2025-12-08 05:46:56] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:56] Rotated to new proxy from GitHub pool | Proxy: http://108.162.193.92:80
+[2025-12-08 05:46:59] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:59] Rotated to new proxy from GitHub pool | Proxy: http://104.21.30.105:80
+[2025-12-08 05:46:59] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:59] Rotated to new proxy from GitHub pool | Proxy: http://170.114.46.194:80
+[2025-12-08 05:46:59] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:59] Rotated to new proxy from GitHub pool | Proxy: http://198.41.205.120:80
