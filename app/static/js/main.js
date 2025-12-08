@@ -505,8 +505,8 @@ function renderMarketData(data, type) {
                 prefix = 'Rs. ';
                 subtitleContainer.textContent = 'per gram (24K)';
             } else if (type === 'inflation') {
-                suffix = '%';
-                subtitleContainer.textContent = 'Annual Inflation Rate';
+                // suffix = '%'; // CPI is an index, no percentage
+                subtitleContainer.textContent = 'Consumer Price Index (Base 2013=100)';
             }
 
             valueContainer.textContent = prefix + data.current.toFixed(2) + suffix;
@@ -537,7 +537,7 @@ function renderMarketChart(history, type) {
     let chartLabel = 'Value';
     if (type === 'usd-lkr') chartLabel = 'USD/LKR Rate';
     else if (type === 'gold') chartLabel = 'Gold Price (LKR)';
-    else if (type === 'inflation') chartLabel = 'Inflation Rate (%)';
+    else if (type === 'inflation') chartLabel = 'Consumer Price Index (CPI)';
 
     marketChart = new Chart(ctx, {
         type: 'line',

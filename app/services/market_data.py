@@ -247,43 +247,43 @@ def initialize_sample_data():
     # Generate 30 days of data
     base_date = datetime.now() - timedelta(days=29)
     
-    # USD/LKR - realistic range around 305-310
-    usd_base = 307.0
+    # USD/LKR - realistic range around 308
+    usd_base = 308.0
     for i in range(30):
         date = (base_date + timedelta(days=i)).strftime("%Y-%m-%d")
         # Add realistic daily variation
-        variation = random.uniform(-2.0, 2.0)
-        value = usd_base + variation + (i * 0.05)  # Slight upward trend
+        variation = random.uniform(-1.0, 1.0)
+        value = usd_base + variation + (i * 0.02)
         history["usd_lkr"].append({
             "date": date,
             "value": round(value, 2)
         })
     
-    # Gold - realistic range around 12,000-12,500 LKR per gram
-    gold_base = 12200.0
+    # Gold - realistic range around 41,000-42,000 LKR per gram
+    gold_base = 41800.0
     for i in range(30):
         date = (base_date + timedelta(days=i)).strftime("%Y-%m-%d")
-        variation = random.uniform(-100, 150)
-        value = gold_base + variation + (i * 5)  # Slight upward trend
+        variation = random.uniform(-200, 200)
+        value = gold_base + variation + (i * 5)
         history["gold"].append({
             "date": date,
             "value": round(value, 2)
         })
     
-    # Fuel - realistic prices
+    # Fuel - realistic prices (Updated for Dec 2025)
     fuel_base = {
-        "Petrol 92 Octane": 350.0,
-        "Petrol 95 Octane": 365.0,
-        "Auto Diesel": 320.0
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
     }
     
     for i in range(30):
         date = (base_date + timedelta(days=i)).strftime("%Y-%m-%d")
         fuel_values = {}
         for fuel_type, base_price in fuel_base.items():
-            # Fuel prices change less frequently, small variations
-            variation = random.uniform(-2.0, 3.0) if i % 7 == 0 else 0
-            value = base_price + variation + (i * 0.2)
+            # Fuel prices change less frequently
+            variation = 0  # Fixed mostly
+            value = base_price + variation
             fuel_values[fuel_type] = round(value, 2)
         
         history["fuel"].append({
@@ -291,12 +291,12 @@ def initialize_sample_data():
             "values": fuel_values
         })
     
-    # Inflation - realistic range around 2-5%
-    inflation_base = 3.5
+    # Inflation (CPI Index) - around 145-150
+    inflation_base = 145.0
     for i in range(30):
         date = (base_date + timedelta(days=i)).strftime("%Y-%m-%d")
-        variation = random.uniform(-0.3, 0.3)
-        value = inflation_base + variation + (i * 0.01)  # Very slight trend
+        variation = random.uniform(-0.1, 0.2)
+        value = inflation_base + variation + (i * 0.05)
         history["inflation"].append({
             "date": date,
             "value": round(value, 2)
