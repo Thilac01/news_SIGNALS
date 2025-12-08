@@ -3,11 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData();
     setupModalHandlers();
     setupMarketData(); // Initialize market data
+    setupExportHandler(); // Initialize export feature
+    updateClock();
+    setupNotifications();
+    setInterval(updateClock, 1000);
 
     // Refresh every 30 seconds
     setInterval(() => {
         fetchStats();
         fetchData();
+        updateNotifications();
     }, 30000);
 
     // Modal Close Handler
@@ -20,44 +25,168 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
-    });
 
-    document.getElementById('refresh-btn').addEventListener('click', async () => {
-        const btn = document.getElementById('refresh-btn');
-        const icon = btn.querySelector('i');
-
-        // Animation
-        icon.classList.add('fa-spin');
-        btn.disabled = true;
-        btn.style.opacity = '0.7';
-
-        try {
-            const response = await fetch('/api/refresh', { method: 'POST' });
-            const res = await response.json();
-            if (res.status === 'success') {
-                setTimeout(() => {
-                    fetchStats();
-                    fetchData();
-                    icon.classList.remove('fa-spin');
-                    btn.disabled = false;
-                    btn.style.opacity = '1';
-                }, 2000);
-            } else {
-                alert('Refresh failed: ' + res.message);
-                icon.classList.remove('fa-spin');
-                btn.disabled = false;
-                btn.style.opacity = '1';
-            }
-        } catch (error) {
-            console.error('Error refreshing:', error);
-            icon.classList.remove('fa-spin');
-            btn.disabled = false;
-            btn.style.opacity = '1';
+        const notifDropdown = document.getElementById('notif-dropdown');
+        const notifBtn = document.getElementById('notif-btn');
+        if (notifDropdown && notifBtn && !notifDropdown.contains(event.target) && !notifBtn.contains(event.target)) {
+            notifDropdown.classList.remove('show');
         }
     });
+
+    const refreshBtn = document.getElementById('refresh-btn');
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', async () => {
+            const icon = refreshBtn.querySelector('i');
+            icon.classList.add('fa-spin');
+            refreshBtn.disabled = true;
+            refreshBtn.style.opacity = '0.7';
+
+            try {
+                const response = await fetch('/api/refresh', { method: 'POST' });
+                const res = await response.json();
+                if (res.status === 'success') {
+                    setTimeout(() => {
+                        fetchStats();
+                        fetchData();
+                        updateNotifications();
+                        icon.classList.remove('fa-spin');
+                        refreshBtn.disabled = false;
+                        refreshBtn.style.opacity = '1';
+                    }, 2000);
+                } else {
+                    alert('Refresh failed: ' + res.message);
+                    icon.classList.remove('fa-spin');
+                    refreshBtn.disabled = false;
+                    refreshBtn.style.opacity = '1';
+                }
+            } catch (error) {
+                console.error('Error refreshing:', error);
+                icon.classList.remove('fa-spin');
+                refreshBtn.disabled = false;
+                refreshBtn.style.opacity = '1';
+            }
+        });
+    }
 });
 
+function setupNotifications() {
+    const notifBtn = document.getElementById('notif-btn');
+    const notifDropdown = document.getElementById('notif-dropdown');
+
+    if (notifBtn && notifDropdown) {
+        notifBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent immediate close
+            notifDropdown.classList.toggle('show');
+        });
+        // Initial check
+        updateNotifications();
+    }
+}
+
+async function updateNotifications() {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+
+        // Filter for "High Risk" or "Major Event"
+        const alerts = data.filter(item => item.impact_level === 'High Risk' || (item.event_flag && item.event_flag !== 'Normal' && item.event_flag !== 'nan'));
+
+        const notifList = document.getElementById('notif-list');
+        const notifDot = document.getElementById('notif-dot');
+
+        if (notifList) {
+            if (alerts.length === 0) {
+                notifList.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.8rem;">No new alerts</div>';
+                if (notifDot) notifDot.style.display = 'none';
+            } else {
+                notifList.innerHTML = '';
+                alerts.slice(0, 5).forEach(alert => {
+                    const div = document.createElement('div');
+                    div.className = 'notif-item';
+                    div.innerHTML = `
+                        <div class="notif-title">${alert.Title}</div>
+                        <div class="notif-meta">
+                            <span>${alert.Source}</span>
+                            <span class="notif-badge">${alert.impact_level}</span>
+                        </div>
+                    `;
+                    div.addEventListener('click', () => {
+                        if (alert.Link) window.open(alert.Link, '_blank');
+                    });
+                    notifList.appendChild(div);
+                });
+
+                if (notifDot) {
+                    notifDot.style.display = 'block';
+                    notifDot.classList.add('pulse');
+                }
+            }
+        }
+    } catch (e) {
+        console.error("Notifications update failed", e);
+    }
+}
+
+function updateClock() {
+    const now = new Date();
+    const timeElem = document.getElementById('clock-time');
+    const dateElem = document.getElementById('clock-date');
+
+    if (timeElem && dateElem) {
+        timeElem.textContent = now.toLocaleTimeString('en-US', {
+            hour: 'numeric',
+            minute: '2-digit',
+            hour12: true
+        });
+
+        dateElem.textContent = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            month: 'short',
+            day: 'numeric'
+        });
+    }
+}
+
 let currentData = [];
+
+function setupExportHandler() {
+    const exportBtn = document.getElementById('btn-export');
+    if (!exportBtn) return;
+
+    exportBtn.addEventListener('click', () => {
+        if (!currentData || currentData.length === 0) {
+            alert('No data available to export.');
+            return;
+        }
+
+        // Convert JSON to CSV
+        const headers = Object.keys(currentData[0]);
+        const csvRows = [];
+
+        // Add headers
+        csvRows.push(headers.join(','));
+
+        // Add values
+        for (const row of currentData) {
+            const values = headers.map(header => {
+                const escaped = ('' + (row[header] || '')).replace(/"/g, '\\"');
+                return `"${escaped}"`;
+            });
+            csvRows.push(values.join(','));
+        }
+
+        const csvString = csvRows.join('\n');
+        const blob = new Blob([csvString], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.setAttribute('hidden', '');
+        a.setAttribute('href', url);
+        a.setAttribute('download', `signal_monitor_export_${new Date().toISOString().slice(0, 10)}.csv`);
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+}
 
 async function fetchStats() {
     try {

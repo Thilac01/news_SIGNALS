@@ -22,6 +22,10 @@ def live_feed():
 def clusters():
     return render_template('clusters.html')
 
+@main.route('/insights')
+def insights():
+    return render_template('insights.html')
+
 @main.route('/map')
 def location_map():
     return render_template('map.html')

@@ -49,11 +49,34 @@
         <main class="main-content">
             <header>
                 <h1>{% block header_title %}Situational Awareness Dashboard{% endblock %}</h1>
-                <div class="header-controls" style="display: flex; align-items: center; gap: 15px;">
-                    <span id="last-updated" style="font-size: 0.8rem; color: var(--text-secondary);">Last Updated:
-                        --</span>
-                    <div class="status-indicator">
-                        <span class="dot"></span> Live System
+                <div class="header-controls" style="display: flex; align-items: center; gap: 20px;">
+                    <!-- Time Widget -->
+                    <div id="header-clock"
+                        style="text-align: right; line-height: 1.2; display: none; margin-right: 10px;">
+                        <div id="clock-time"
+                            style="font-size: 1.1rem; font-weight: 700; font-variant-numeric: tabular-nums;">--:--</div>
+                        <div id="clock-date" style="font-size: 0.75rem; color: var(--text-secondary);">--</div>
+                    </div>
+
+                    <!-- Export Button -->
+                    <button id="btn-export" class="ios-btn secondary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Export
+                    </button>
+
+                    <!-- Notification Bell -->
+                    <div class="icon-btn-wrapper" style="position: relative;">
+                        <button class="ios-icon-btn">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <span class="notification-dot"></span>
+                    </div>
+
+                    <div class="divider-vertical"></div>
+
+                    <!-- Status Pill -->
+                    <div class="status-pill active">
+                        <span class="dot pulse"></span>
+                        <span>Live</span>
                     </div>
                 </div>
             </header>
