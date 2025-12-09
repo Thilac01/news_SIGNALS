@@ -1,0 +1,409 @@
+{% extends "base.html" %}
+
+{% block title %}Settings{% endblock %}
+{% block header_title %}System Settings{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 600px; margin: 0 auto;">
+    <h2 style="margin-bottom: 1.5rem;">Scheduler Configuration</h2>
+
+    <div style="margin-bottom: 2rem;">
+        <label for="interval" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Update
+            Interval (Minutes)</label>
+        <div style="display: flex; gap: 10px;">
+            <input type="number" id="interval" min="5" max="1440" value="15"
+                style="padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-dark); color: white; flex: 1;">
+            <button id="save-btn"
+                style="background: var(--accent); border: none; padding: 10px 20px; border-radius: 6px; color: white; cursor: pointer; font-weight: 600;">Save
+                & Apply</button>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Minimum 5 minutes. Changes apply
+            immediately.</p>
+    </div>
+
+    <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 2rem;">
+        <h2 style="margin-bottom: 1.5rem;">Model Configuration</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Select the AI model used for
+            clustering and analysis. Models are downloaded from Hugging Face.</p>
+
+        <div style="margin-bottom: 1.5rem;">
+            <label for="model-select"
+                style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Select
+                Model</label>
+            <div style="display: flex; gap: 10px;">
+                <select id="model-select"
+                    style="padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-dark); color: white; flex: 1;">
+                    <option value="" disabled selected>Loading models...</option>
+                </select>
+                <button id="load-model-btn"
+                    style="background: var(--accent); border: none; padding: 10px 20px; border-radius: 6px; color: white; cursor: pointer; font-weight: 600;">Load
+                    Model</button>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span style="color: var(--text-secondary);">Current Model:</span>
+                <span id="current-model-name" style="color: white; font-weight: 600;">--</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-secondary);">Status:</span>
+                <span id="model-status" style="color: var(--text-secondary);">Checking...</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 2rem;">
+        <h2 style="margin-bottom: 1.5rem;">Proxy Rotation</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Configure rotating proxies for web scraping to
+            avoid blocking and rate limits.</p>
+
+        <div style="margin-bottom: 1.5rem;">
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                <input type="checkbox" id="proxy-enabled" style="width: 20px; height: 20px; cursor: pointer;">
+                <span style="font-weight: 600;">Enable Rotating Proxies</span>
+            </label>
+        </div>
+
+        <div id="proxy-config" style="display: none;">
+            <div
+                style="margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); padding: 1rem; border-radius: 6px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                <p style="color: var(--text-primary); margin-bottom: 0.5rem;"><i class="fa-brands fa-github"></i>
+                    <strong>GitHub Proxy Pool</strong></p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Proxies are automatically fetched and rotated from public GitHub repositories. No API key required.
+                </p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="rotation-interval"
+                    style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Rotation Interval
+                    (Hours)</label>
+                <input type="number" id="rotation-interval" min="1" max="24" value="1"
+                    style="padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-dark); color: white; width: 150px;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Automatic Proxy Switching:</p>
+                <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="auto-switch-403" checked
+                        style="width: 18px; height: 18px; cursor: pointer;">
+                    <span>Switch on HTTP 403 (Forbidden)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="auto-switch-429" checked
+                        style="width: 18px; height: 18px; cursor: pointer;">
+                    <span>Switch on HTTP 429 (Rate Limit)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="auto-switch-503" checked
+                        style="width: 18px; height: 18px; cursor: pointer;">
+                    <span>Switch on HTTP 503 (Service Unavailable)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="auto-switch-captcha" checked
+                        style="width: 18px; height: 18px; cursor: pointer;">
+                    <span>Switch on CAPTCHA Detection</span>
+                </label>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 1rem;">
+            <button id="save-proxy-btn"
+                style="background: var(--accent); border: none; padding: 10px 20px; border-radius: 6px; color: white; cursor: pointer; font-weight: 600;">
+                Save Proxy Settings
+            </button>
+        </div>
+
+        <div
+            style="margin-top: 1.5rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid var(--border);">
+            <h3 style="margin-bottom: 1rem;">Proxy Status</h3>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span style="color: var(--text-secondary);">Current Proxy:</span>
+                <span id="current-proxy" style="color: white; font-family: monospace; font-size: 0.9rem;">--</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span style="color: var(--text-secondary);">Rotation Count:</span>
+                <span id="rotation-count" style="color: white;">0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span style="color: var(--text-secondary);">Active Pool Size:</span>
+                <span id="pool-size" style="color: var(--opportunity);">0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-secondary);">Next Rotation:</span>
+                <span id="next-rotation" style="color: white;">--</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+            <h3 style="margin-bottom: 1rem;">Recent Proxy Logs</h3>
+            <div id="proxy-logs"
+                style="max-height: 200px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: var(--text-secondary);">
+                No logs yet...
+            </div>
+        </div>
+    </div>
+
+    <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 2rem;">
+        <h3 style="margin-bottom: 1rem;">System Status</h3>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <span style="color: var(--text-secondary);">Scheduler Status:</span>
+            <span style="color: var(--opportunity);">Running</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-secondary);">Next Run:</span>
+            <span id="next-run">Calculating...</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const intervalInput = document.getElementById('interval');
+        const saveBtn = document.getElementById('save-btn');
+        const nextRunSpan = document.getElementById('next-run');
+
+        // Model elements
+        const modelSelect = document.getElementById('model-select');
+        const loadModelBtn = document.getElementById('load-model-btn');
+        const currentModelName = document.getElementById('current-model-name');
+        const modelStatus = document.getElementById('model-status');
+
+        // Load Scheduler Settings
+        try {
+            const response = await fetch('/api/settings');
+            const data = await response.json();
+            if (data.interval) {
+                intervalInput.value = data.interval;
+            }
+            if (data.next_run) {
+                nextRunSpan.textContent = data.next_run;
+            }
+        } catch (error) {
+            console.error('Error loading settings:', error);
+        }
+
+        // Load Model Info
+        async function updateModelInfo() {
+            try {
+                const response = await fetch('/api/model');
+                const data = await response.json();
+
+                currentModelName.textContent = data.current_model;
+                modelStatus.textContent = data.status;
+
+                // Color code status
+                if (data.status === 'Ready') {
+                    modelStatus.style.color = 'var(--opportunity)';
+                    loadModelBtn.disabled = false;
+                    loadModelBtn.textContent = 'Load Model';
+                } else if (data.status.startsWith('Loading')) {
+                    modelStatus.style.color = 'var(--event)';
+                    loadModelBtn.disabled = true;
+                    loadModelBtn.textContent = 'Loading...';
+                } else if (data.status.startsWith('Error')) {
+                    modelStatus.style.color = 'var(--risk)';
+                }
+
+                // Populate dropdown if empty
+                if (modelSelect.options.length <= 1) {
+                    modelSelect.innerHTML = '';
+                    data.available_models.forEach(m => {
+                        const opt = document.createElement('option');
+                        opt.value = m;
+                        opt.textContent = m;
+                        if (m === data.current_model) opt.selected = true;
+                        modelSelect.appendChild(opt);
+                    });
+                }
+
+            } catch (error) {
+                console.error('Error loading model info:', error);
+            }
+        }
+
+        updateModelInfo();
+        // Poll status every 2 seconds if loading
+        setInterval(() => {
+            if (modelStatus.textContent.startsWith('Loading')) {
+                updateModelInfo();
+            }
+        }, 2000);
+
+        // Save Scheduler
+        saveBtn.addEventListener('click', async () => {
+            const val = parseInt(intervalInput.value);
+            if (val < 5) {
+                alert('Minimum interval is 5 minutes.');
+                return;
+            }
+
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Saving...';
+
+            try {
+                const response = await fetch('/api/settings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ interval: val })
+                });
+                const res = await response.json();
+
+                if (res.status === 'success') {
+                    alert('Settings saved. Scheduler updated.');
+                    if (res.next_run) {
+                        nextRunSpan.textContent = res.next_run;
+                    }
+                } else {
+                    alert('Error: ' + res.message);
+                }
+            } catch (error) {
+                alert('Error saving settings.');
+            } finally {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save & Apply';
+            }
+        });
+
+        // Load Model
+        loadModelBtn.addEventListener('click', async () => {
+            const selectedModel = modelSelect.value;
+            if (!selectedModel) return;
+
+            if (!confirm(`Are you sure you want to load "${selectedModel}"? This may take a while to download.`)) return;
+
+            loadModelBtn.disabled = true;
+            loadModelBtn.textContent = 'Requesting...';
+
+            try {
+                const response = await fetch('/api/model', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ model_name: selectedModel })
+                });
+                const res = await response.json();
+
+                if (res.status === 'success') {
+                    updateModelInfo();
+                } else {
+                    alert('Error: ' + res.message);
+                    updateModelInfo();
+                }
+            } catch (error) {
+                alert('Error requesting model load.');
+                updateModelInfo();
+            }
+        });
+    });
+
+    // ===== PROXY SETTINGS =====
+    const proxyEnabled = document.getElementById('proxy-enabled');
+    const proxyConfig = document.getElementById('proxy-config');
+    // const proxyApiEndpoint = document.getElementById('proxy-api-endpoint');
+    // const proxyApiKey = document.getElementById('proxy-api-key');
+    const rotationInterval = document.getElementById('rotation-interval');
+    const autoSwitch403 = document.getElementById('auto-switch-403');
+    const autoSwitch429 = document.getElementById('auto-switch-429');
+    const autoSwitch503 = document.getElementById('auto-switch-503');
+    const autoSwitchCaptcha = document.getElementById('auto-switch-captcha');
+    const saveProxyBtn = document.getElementById('save-proxy-btn');
+
+    // Load proxy settings
+    async function loadProxySettings() {
+        try {
+            const response = await fetch('/api/proxy-settings');
+            const config = await response.json();
+
+            proxyEnabled.checked = config.enabled || false;
+            // proxyApiEndpoint and proxyApiKey are no longer needed
+            rotationInterval.value = config.rotation_interval_hours || 1;
+            autoSwitch403.checked = config.auto_switch_on_403 !== false;
+            autoSwitch429.checked = config.auto_switch_on_429 !== false;
+            autoSwitch503.checked = config.auto_switch_on_503 !== false;
+            autoSwitchCaptcha.checked = config.auto_switch_on_captcha !== false;
+
+            // Show/hide config based on enabled status
+            proxyConfig.style.display = config.enabled ? 'block' : 'none';
+        } catch (error) {
+            console.error('Error loading proxy settings:', error);
+        }
+    }
+
+    // Load proxy status
+    async function loadProxyStatus() {
+        try {
+            const response = await fetch('/api/proxy-status');
+            const data = await response.json();
+
+            document.getElementById('current-proxy').textContent = data.status.current_proxy || 'None';
+            document.getElementById('rotation-count').textContent = data.status.rotation_count || 0;
+            document.getElementById('pool-size').textContent = data.status.pool_size || 0;
+            document.getElementById('next-rotation').textContent = data.status.next_rotation ?
+                new Date(data.status.next_rotation).toLocaleString() : '--';
+
+            // Update logs
+            const logsDiv = document.getElementById('proxy-logs');
+            if (data.logs && data.logs.length > 0) {
+                logsDiv.innerHTML = data.logs.join('');
+                logsDiv.scrollTop = logsDiv.scrollHeight;
+            }
+        } catch (error) {
+            console.error('Error loading proxy status:', error);
+        }
+    }
+
+    // Toggle proxy config visibility
+    proxyEnabled.addEventListener('change', () => {
+        proxyConfig.style.display = proxyEnabled.checked ? 'block' : 'none';
+    });
+
+    // Save proxy settings
+    saveProxyBtn.addEventListener('click', async () => {
+        saveProxyBtn.disabled = true;
+        saveProxyBtn.textContent = 'Saving...';
+
+        try {
+            const config = {
+                enabled: proxyEnabled.checked,
+                rotation_interval_hours: parseInt(rotationInterval.value),
+                auto_switch_on_403: autoSwitch403.checked,
+                auto_switch_on_429: autoSwitch429.checked,
+                auto_switch_on_503: autoSwitch503.checked,
+                auto_switch_on_captcha: autoSwitchCaptcha.checked
+            };
+
+            const response = await fetch('/api/proxy-settings', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(config)
+            });
+
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                alert('Proxy settings saved successfully!');
+                loadProxyStatus();
+            } else {
+                alert('Error: ' + result.message);
+            }
+        } catch (error) {
+            alert('Error saving proxy settings.');
+            console.error(error);
+        } finally {
+            saveProxyBtn.disabled = false;
+            saveProxyBtn.textContent = 'Save Proxy Settings';
+        }
+    });
+
+    // Initial load
+    loadProxySettings();
+    loadProxyStatus();
+
+    // Refresh proxy status every 10 seconds
+    setInterval(loadProxyStatus, 10000);
+</script>
+{% endblock %}

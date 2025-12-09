@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}Insights & Analytics{% endblock %}
+{% block header_title %}Deep Dive Analytics{% endblock %}
+
+{% block content %}
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+
+    <!-- Keyword Cloud -->
+    <div class="card" style="grid-column: span 2; padding: 24px;">
+        <h2 style="font-size: 1.2rem; margin-bottom: 20px; font-weight: 600;">Top Emerging Themes</h2>
+        <div
+            style="height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+            <div id="word-cloud-placeholder">
+                <!-- Simple visual approximation of word cloud since we don't have a library for it yet -->
+                <canvas id="keywordChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sentiment Trend -->
+    <div class="card" style="padding: 24px;">
+        <h2 style="font-size: 1.2rem; margin-bottom: 20px; font-weight: 600;">Sentiment Trend (Last 24h)</h2>
+        <div style="height: 300px;">
+            <canvas id="sentimentTrendChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Source Distribution -->
+    <div class="card" style="padding: 24px;">
+        <h2 style="font-size: 1.2rem; margin-bottom: 20px; font-weight: 600;">Source Reliability & coverage</h2>
+        <div style="height: 300px;">
+            <canvas id="sourceChart"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        // Fetch data to populate charts
+        try {
+            const response = await fetch('/api/data');
+            const data = await response.json();
+
+            renderKeywords(data);
+            renderSentiment(data);
+            renderSources(data);
+        } catch (error) {
+            console.error(error);
+        }
+    });
+
+    function renderKeywords(data) {
+        // Simplified top keywords chart (bar) instead of cloud for stability
+        const ctx = document.getElementById('keywordChart').getContext('2d');
+        const keywords = {};
+
+        data.forEach(d => {
+            // Rough extraction from operational tags
+            const tags = d.operational_tag.split(', ');
+            tags.forEach(t => {
+                if (t !== 'general') keywords[t] = (keywords[t] || 0) + 1;
+            });
+        });
+
+        // Top 10
+        const sorted = Object.entries(keywords).sort((a, b) => b[1] - a[1]).slice(0, 10);
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: sorted.map(k => k[0]),
+                datasets: [{
+                    label: 'Mentions',
+                    data: sorted.map(k => k[1]),
+                    backgroundColor: '#3b82f6',
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+                    y: { grid: { display: false }, ticks: { color: '#fff' } }
+                }
+            }
+        });
+    }
+
+    function renderSentiment(data) {
+        const ctx = document.getElementById('sentimentTrendChart').getContext('2d');
+        // Mocking time trend for demo purposes as we might not have timestamps on all sample data
+        // We'll group by "Impact Level" as a proxy for sentiment polarity
+
+        const sentimentCounts = {
+            'Risk': 0,
+            'Opportunity': 0,
+            'Neutral': 0
+        };
+
+        data.forEach(d => {
+            if (d.impact_level.includes('Risk')) sentimentCounts['Risk']++;
+            else if (d.impact_level.includes('Opportunity')) sentimentCounts['Opportunity']++;
+            else sentimentCounts['Neutral']++;
+        });
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(sentimentCounts),
+                datasets: [{
+                    data: Object.values(sentimentCounts),
+                    backgroundColor: ['#ef4444', '#10b981', '#64748b'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    }
+
+    function renderSources(data) {
+        const ctx = document.getElementById('sourceChart').getContext('2d');
+        const sources = {};
+        data.forEach(d => { sources[d.Source] = (sources[d.Source] || 0) + 1; });
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: Object.keys(sources),
+                datasets: [{
+                    data: Object.values(sources),
+                    backgroundColor: ['#3b82f6', '#8b5cf6', '#f59e0b', '#ec4899'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    }
+</script>
+{% endblock %}

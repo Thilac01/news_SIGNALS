@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Clusters{% endblock %}
+{% block header_title %}Topic Clusters{% endblock %}
+
+{% block content %}
+<div class="dashboard-grid">
+    <div class="card" style="grid-column: 1 / -1;">
+        <h2>Cluster Overview</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Groups of related articles automatically detected
+            by AI.</p>
+        <div id="clusters-container"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+            <div class="loading">Loading clusters...</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('clusters-container');
+
+        try {
+            const response = await fetch('/api/data');
+            const data = await response.json();
+
+            // Group by cluster
+            const clusters = {};
+            data.forEach(item => {
+                const cid = item.topic_cluster;
+                if (!clusters[cid]) clusters[cid] = [];
+                clusters[cid].push(item);
+            });
+
+            container.innerHTML = '';
+
+            Object.keys(clusters).forEach(cid => {
+                const items = clusters[cid];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.background = 'var(--bg-card)';
+
+                // Find a representative title (e.g., the first one)
+                // Use the backend-generated cluster name if available, else fallback
+                const clusterName = items[0].cluster_name || `Cluster #${cid}`;
+                const title = items[0].Title;
+
+                // Check for event flag
+                const isEvent = items.some(i => i.event_flag !== 'Normal');
+                const eventBadge = isEvent ? `<span class="tag" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; margin-left: auto;">Event Detected</span>` : '';
+
+                card.innerHTML = `
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <h3 style="font-size: 1.1rem; color: var(--accent);">${clusterName}</h3>
+                        ${eventBadge}
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 10px; font-weight: 600;">${title}...</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">${items.length} articles in this topic.</p>
+                    <div style="margin-top: 10px; max-height: 150px; overflow-y: auto; font-size: 0.8rem;">
+                        <ul style="padding-left: 1rem; color: var(--text-secondary);">
+                            ${items.slice(0, 5).map(i => `<li>${i.Source}: ${i.Title.substring(0, 50)}...</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+        } catch (error) {
+            container.innerHTML = '<p>Error loading clusters.</p>';
+        }
+    });
+</script>
+{% endblock %}

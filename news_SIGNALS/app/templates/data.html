@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Raw Data{% endblock %}
+{% block header_title %}Raw Data Explorer{% endblock %}
+
+{% block content %}
+<div class="card" style="overflow-x: auto;">
+    <table id="data-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+        <thead>
+            <tr style="border-bottom: 1px solid var(--border); color: var(--text-secondary);">
+                <th style="padding: 12px;">Source</th>
+                <th style="padding: 12px;">Title</th>
+                <th style="padding: 12px;">Impact</th>
+                <th style="padding: 12px;">Score</th>
+                <th style="padding: 12px;">Link</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr>
+                <td colspan="5" style="padding: 12px; text-align: center;">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const tbody = document.getElementById('table-body');
+
+        try {
+            const response = await fetch('/api/data');
+            const data = await response.json();
+
+            tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="padding: 12px; text-align: center;">No data available</td></tr>';
+                return;
+            }
+
+            data.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+
+                tr.innerHTML = `
+                    <td style="padding: 12px;">${item.Source}</td>
+                    <td style="padding: 12px;">${item.Title}</td>
+                    <td style="padding: 12px;">${item.impact_level}</td>
+                    <td style="padding: 12px;">${item.impact_score.toFixed(1)}</td>
+                    <td style="padding: 12px;"><a href="${item.Link}" target="_blank" style="color: var(--accent);"><i class="fa-solid fa-link"></i></a></td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+        } catch (error) {
+            tbody.innerHTML = '<tr><td colspan="5" style="padding: 12px; text-align: center;">Error loading data</td></tr>';
+        }
+    });
+</script>
+{% endblock %}

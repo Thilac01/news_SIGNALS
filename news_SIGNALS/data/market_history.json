@@ -1,0 +1,616 @@
+{
+  "usd_lkr": [
+    {
+      "date": "2025-11-10",
+      "value": 307.48
+    },
+    {
+      "date": "2025-11-11",
+      "value": 308.34
+    },
+    {
+      "date": "2025-11-12",
+      "value": 307.8
+    },
+    {
+      "date": "2025-11-13",
+      "value": 307.78
+    },
+    {
+      "date": "2025-11-14",
+      "value": 307.23
+    },
+    {
+      "date": "2025-11-15",
+      "value": 307.87
+    },
+    {
+      "date": "2025-11-16",
+      "value": 307.78
+    },
+    {
+      "date": "2025-11-17",
+      "value": 307.73
+    },
+    {
+      "date": "2025-11-18",
+      "value": 308.47
+    },
+    {
+      "date": "2025-11-19",
+      "value": 308.09
+    },
+    {
+      "date": "2025-11-20",
+      "value": 307.77
+    },
+    {
+      "date": "2025-11-21",
+      "value": 308.75
+    },
+    {
+      "date": "2025-11-22",
+      "value": 308.6
+    },
+    {
+      "date": "2025-11-23",
+      "value": 308.86
+    },
+    {
+      "date": "2025-11-24",
+      "value": 307.49
+    },
+    {
+      "date": "2025-11-25",
+      "value": 309.01
+    },
+    {
+      "date": "2025-11-26",
+      "value": 308.78
+    },
+    {
+      "date": "2025-11-27",
+      "value": 308.71
+    },
+    {
+      "date": "2025-11-28",
+      "value": 308.62
+    },
+    {
+      "date": "2025-11-29",
+      "value": 308.59
+    },
+    {
+      "date": "2025-11-30",
+      "value": 308.59
+    },
+    {
+      "date": "2025-12-01",
+      "value": 308.58
+    },
+    {
+      "date": "2025-12-02",
+      "value": 307.98
+    },
+    {
+      "date": "2025-12-03",
+      "value": 308.96
+    },
+    {
+      "date": "2025-12-04",
+      "value": 309.47
+    },
+    {
+      "date": "2025-12-05",
+      "value": 309.03
+    },
+    {
+      "date": "2025-12-06",
+      "value": 307.64
+    },
+    {
+      "date": "2025-12-07",
+      "value": 309.49
+    },
+    {
+      "date": "2025-12-08",
+      "value": 308.95
+    },
+    {
+      "date": "2025-12-09",
+      "value": 308.39
+    }
+  ],
+  "gold": [
+    {
+      "date": "2025-11-10",
+      "value": 41954.77
+    },
+    {
+      "date": "2025-11-11",
+      "value": 41612.49
+    },
+    {
+      "date": "2025-11-12",
+      "value": 41986.9
+    },
+    {
+      "date": "2025-11-13",
+      "value": 41848.65
+    },
+    {
+      "date": "2025-11-14",
+      "value": 41627.34
+    },
+    {
+      "date": "2025-11-15",
+      "value": 41671.47
+    },
+    {
+      "date": "2025-11-16",
+      "value": 41699.09
+    },
+    {
+      "date": "2025-11-17",
+      "value": 41685.64
+    },
+    {
+      "date": "2025-11-18",
+      "value": 41782.29
+    },
+    {
+      "date": "2025-11-19",
+      "value": 41980.7
+    },
+    {
+      "date": "2025-11-20",
+      "value": 41869.24
+    },
+    {
+      "date": "2025-11-21",
+      "value": 41751.89
+    },
+    {
+      "date": "2025-11-22",
+      "value": 41749.83
+    },
+    {
+      "date": "2025-11-23",
+      "value": 41775.57
+    },
+    {
+      "date": "2025-11-24",
+      "value": 41719.92
+    },
+    {
+      "date": "2025-11-25",
+      "value": 41999.6
+    },
+    {
+      "date": "2025-11-26",
+      "value": 42015.38
+    },
+    {
+      "date": "2025-11-27",
+      "value": 41735.11
+    },
+    {
+      "date": "2025-11-28",
+      "value": 41872.42
+    },
+    {
+      "date": "2025-11-29",
+      "value": 41982.54
+    },
+    {
+      "date": "2025-11-30",
+      "value": 42089.48
+    },
+    {
+      "date": "2025-12-01",
+      "value": 41960.65
+    },
+    {
+      "date": "2025-12-02",
+      "value": 42017.56
+    },
+    {
+      "date": "2025-12-03",
+      "value": 41951.28
+    },
+    {
+      "date": "2025-12-04",
+      "value": 42047.32
+    },
+    {
+      "date": "2025-12-05",
+      "value": 42056.14
+    },
+    {
+      "date": "2025-12-06",
+      "value": 41852.36
+    },
+    {
+      "date": "2025-12-07",
+      "value": 41771.85
+    },
+    {
+      "date": "2025-12-08",
+      "value": 42085.12
+    },
+    {
+      "date": "2025-12-09",
+      "value": 41500.06
+    }
+  ],
+  "fuel": [
+    {
+      "date": "2025-11-10",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-11",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-12",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-13",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-14",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-15",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-16",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-17",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-18",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-19",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-20",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-21",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-22",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-23",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-24",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-25",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-26",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-27",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-28",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-29",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-11-30",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-01",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-02",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-03",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-04",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-05",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-06",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-07",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-08",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Auto Diesel": 277.0
+      }
+    },
+    {
+      "date": "2025-12-09",
+      "values": {
+        "Lanka Petrol 92 Octane": 294.0,
+        "Lanka Auto Diesel": 277.0,
+        "Lanka Kerosene": 180.0,
+        "Lanka Petrol 95 Octane Euro 4": 335.0,
+        "Lanka Super Diesel 4 Star Euro 4": 318.0,
+        "Lanka Industrial Kerosene": 193.0,
+        "Lanka Fuel Oil Super": 194.0,
+        "Lanka Fuel Oil 1500 Sec. (High Sulphur)": 194.0,
+        "Lanka Fuel Oil 1500 Sec. (Low Sulphur)": 194.0
+      }
+    }
+  ],
+  "inflation": [
+    {
+      "date": "2025-11-10",
+      "value": 145.17
+    },
+    {
+      "date": "2025-11-11",
+      "value": 145.1
+    },
+    {
+      "date": "2025-11-12",
+      "value": 145.15
+    },
+    {
+      "date": "2025-11-13",
+      "value": 145.21
+    },
+    {
+      "date": "2025-11-14",
+      "value": 145.22
+    },
+    {
+      "date": "2025-11-15",
+      "value": 145.25
+    },
+    {
+      "date": "2025-11-16",
+      "value": 145.49
+    },
+    {
+      "date": "2025-11-17",
+      "value": 145.31
+    },
+    {
+      "date": "2025-11-18",
+      "value": 145.36
+    },
+    {
+      "date": "2025-11-19",
+      "value": 145.42
+    },
+    {
+      "date": "2025-11-20",
+      "value": 145.49
+    },
+    {
+      "date": "2025-11-21",
+      "value": 145.58
+    },
+    {
+      "date": "2025-11-22",
+      "value": 145.71
+    },
+    {
+      "date": "2025-11-23",
+      "value": 145.68
+    },
+    {
+      "date": "2025-11-24",
+      "value": 145.85
+    },
+    {
+      "date": "2025-11-25",
+      "value": 145.93
+    },
+    {
+      "date": "2025-11-26",
+      "value": 145.77
+    },
+    {
+      "date": "2025-11-27",
+      "value": 145.96
+    },
+    {
+      "date": "2025-11-28",
+      "value": 145.94
+    },
+    {
+      "date": "2025-11-29",
+      "value": 146.05
+    },
+    {
+      "date": "2025-11-30",
+      "value": 146.23
+    },
+    {
+      "date": "2025-12-01",
+      "value": 146.25
+    },
+    {
+      "date": "2025-12-02",
+      "value": 146.15
+    },
+    {
+      "date": "2025-12-03",
+      "value": 146.32
+    },
+    {
+      "date": "2025-12-04",
+      "value": 146.44
+    },
+    {
+      "date": "2025-12-05",
+      "value": 146.4
+    },
+    {
+      "date": "2025-12-06",
+      "value": 146.55
+    },
+    {
+      "date": "2025-12-07",
+      "value": 146.5
+    },
+    {
+      "date": "2025-12-08",
+      "value": 146.53
+    },
+    {
+      "date": "2025-12-09",
+      "value": 147.088
+    }
+  ]
+}

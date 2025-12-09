@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Live Feed{% endblock %}
+{% block header_title %}Live Intelligence Feed{% endblock %}
+
+{% block content %}
+<div class="card" style="padding: 24px; min-height: 80vh;">
+    <div class="feed-controls" style="margin-bottom: 24px; display: flex; gap: 16px; flex-wrap: wrap;">
+        <div style="position: relative; flex: 1; min-width: 250px;">
+            <i class="fa-solid fa-magnifying-glass"
+                style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-secondary);"></i>
+            <input type="text" id="feed-search" class="ios-input" placeholder="Search signals..."
+                style="width: 100%; padding-left: 42px;">
+        </div>
+        <select id="feed-filter" class="ios-select" style="min-width: 180px;">
+            <option value="all">All Impacts</option>
+            <option value="High Risk">High Risk</option>
+            <option value="Risk">Risk</option>
+            <option value="Opportunity">Opportunity</option>
+            <option value="High Opportunity">High Opportunity</option>
+        </select>
+    </div>
+
+    <div class="feed-container" id="full-feed-container"
+        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
+        <div class="loading-sm">Loading live feed...</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('full-feed-container');
+        const searchInput = document.getElementById('feed-search');
+        const filterSelect = document.getElementById('feed-filter');
+
+        let allData = [];
+
+        try {
+            const response = await fetch('/api/data');
+            allData = await response.json();
+            renderFeed(allData);
+        } catch (error) {
+            container.innerHTML = '<div style="color: var(--text-secondary); padding: 20px;">Unable to load feed data.</div>';
+        }
+
+        function renderFeed(data) {
+            container.innerHTML = '';
+            if (data.length === 0) {
+                container.innerHTML = '<div style="color: var(--text-secondary); padding: 20px;">No active signals found matching your criteria.</div>';
+                return;
+            }
+
+            // Sort by impact score (magnitude)
+            const sorted = data.sort((a, b) => Math.abs(b.impact_score) - Math.abs(a.impact_score));
+
+            sorted.forEach(item => {
+                const div = document.createElement('div');
+                // Use 'feed-item card' to inherit the glass card style, but maybe slightly reduced padding if needed. 
+                // Currently 'card' has 24px padding which is good.
+                div.className = 'feed-item card';
+                div.style.padding = '20px'; // Override padding slightly for tighter feed items if desired, or keep as is.
+                div.style.display = 'flex';
+                div.style.flexDirection = 'column';
+                div.style.gap = '12px';
+                div.style.height = '100%'; // Full height for grid
+
+                const impactClass = `impact-${item.impact_level.toLowerCase().replace(' ', '-')}`;
+
+                div.innerHTML = `
+                    <div class="feed-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <span class="source-badge" style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; color: var(--text-secondary); backdrop-filter: blur(4px);">${item.Source}</span>
+                        <span class="impact-badge ${impactClass}" style="padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">${item.impact_level}</span>
+                    </div>
+                    
+                    <div class="feed-title" style="font-size: 1.05rem; font-weight: 600; line-height: 1.4; color: #fff;">${item.Title}</div>
+                    
+                    <div class="feed-summary" style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; flex-grow: 1;">${item.Summary}</div>
+                    
+                    <div class="feed-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border);">
+                        <div class="tags" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span class="tag" style="background: rgba(10, 132, 255, 0.15); color: var(--accent); padding: 3px 8px; border-radius: 6px; font-size: 0.75rem;">${item.operational_tag}</span>
+                            ${item.event_flag !== 'Normal' ? `<span class="tag" style="background: rgba(255, 159, 10, 0.15); color: #ff9f0a; padding: 3px 8px; border-radius: 6px; font-size: 0.75rem;">${item.event_flag}</span>` : ''}
+                        </div>
+                        <a href="${item.Link}" target="_blank" class="ios-icon-btn" style="width: 28px; height: 28px; font-size: 0.8rem; background: transparent; color: var(--text-secondary); text-decoration: none;">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function filterData() {
+            const term = searchInput.value.toLowerCase();
+            const filter = filterSelect.value;
+
+            const filtered = allData.filter(item => {
+                const matchesSearch = item.Title.toLowerCase().includes(term) || item.Summary.toLowerCase().includes(term);
+                const matchesFilter = filter === 'all' || item.impact_level === filter;
+                return matchesSearch && matchesFilter;
+            });
+            renderFeed(filtered);
+        }
+
+        searchInput.addEventListener('input', filterData);
+        filterSelect.addEventListener('change', filterData);
+    });
+</script>
+{% endblock %}

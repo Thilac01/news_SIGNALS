@@ -1,0 +1,688 @@
+[2025-12-07 17:51:01] Proxy rotation enabled via settings | Proxy: None
+[2025-12-07 17:55:09] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 17:55:12] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 17:55:16] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 17:56:15] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 17:56:19] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 17:56:22] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:00:35] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:00:38] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:00:41] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:02:13] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:03:23] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:03:31] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:03:38] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:03:52] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:03:56] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:04:13] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:05:25] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:05:36] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:05:40] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:05:43] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:05:46] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:05:47] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:05:58] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:01] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:03] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:06] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:08] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:16] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:19] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:24] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:27] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:31] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:06:32] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:08:14] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:09:57] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:10:00] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:10:04] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:10:04] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:10:08] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:10:08] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:10:18] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:19:06] Proxy rotation enabled via settings | Proxy: None
+[2025-12-07 18:20:15] Proxy rotation enabled via settings | Proxy: None
+[2025-12-07 18:22:44] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:22:44] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:22:45] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:22:49] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:22:49] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:22:51] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:22:58] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:22:58] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:22:59] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:23:06] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:23:06] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:23:07] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:23:13] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:23:13] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:23:14] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:23:19] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:23:19] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:23:20] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:24:08] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:24:08] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:24:09] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:24:14] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:24:14] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:24:15] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:24:20] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:24:20] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:24:21] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:26:11] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:26:11] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:26:12] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:26:16] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:26:16] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:26:17] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:26:23] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:26:23] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:26:25] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:55:48] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:55:48] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:55:49] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:55:55] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:55:55] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:55:57] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:56:07] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:56:07] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:56:09] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:57:36] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:57:36] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:57:39] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:57:39] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 18:57:42] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 18:57:44] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:42] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:42] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:01:43] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:48] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:48] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:01:49] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:49] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:49] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:01:51] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:58] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:01:58] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:02:00] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:02:04] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:02:04] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:02:06] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:02:14] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:02:14] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:02:15] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:02:23] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:02:23] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:02:24] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:03:50] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:03:50] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:03:52] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:03:57] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:03:57] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:03:59] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:04:03] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:04:03] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:04:04] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:05:55] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:05:55] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:05:57] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:06:02] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:06:02] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:06:04] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:06:11] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:06:11] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:06:12] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:07:36] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:07:36] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:07:37] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:07:41] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:07:41] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:07:42] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:07:47] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 19:07:47] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 19:07:48] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:38:18] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:38:18] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:38:19] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:38:23] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:38:24] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:38:25] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:38:32] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:38:32] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:38:34] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:40] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:40] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:39:42] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:48] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:48] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:39:50] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:53] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:53] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:39:53] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:53] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:39:55] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:56] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:56] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:56] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:39:57] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:57] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:39:59] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:39:59] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:01] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:01] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:40:03] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:04] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:04] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:40:06] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:06] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:06] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:40:08] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:08] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:08] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:40:10] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:11] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:11] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:40:13] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:17] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:40:17] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:40:18] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:37] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:37] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:42:37] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:37] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:42:40] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:40] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:47] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:47] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:42:47] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:47] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:42:49] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:49] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:53] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:53] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:42:55] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:55] Error fetching proxy: 429 Client Error: Too Many Requests for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:42:55] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:42:57] Error fetching proxy: 401 Client Error: Unauthorized for url: https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country%5B%5D=all&protocol=http&format=normal&status=all | Proxy: None
+[2025-12-07 20:45:37] Refreshed proxy pool with 40597 proxies | Proxy: None
+[2025-12-07 20:45:39] Rotated to new proxy from GitHub pool | Proxy: http://154.83.2.8:80
+[2025-12-07 20:45:39] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:45:41] Refreshed proxy pool with 40597 proxies | Proxy: None
+[2025-12-07 20:45:41] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:41] Rotated to new proxy from GitHub pool | Proxy: http://104.16.233.207:80
+[2025-12-07 20:45:42] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:42] Rotated to new proxy from GitHub pool | Proxy: http://108.162.194.120:80
+[2025-12-07 20:45:42] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:42] Rotated to new proxy from GitHub pool | Proxy: http://13.232.245.132:80
+[2025-12-07 20:45:43] Rotated to new proxy from GitHub pool | Proxy: http://173.245.49.191:80
+[2025-12-07 20:45:43] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:45:44] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:44] Rotated to new proxy from GitHub pool | Proxy: http://172.67.145.90:80
+[2025-12-07 20:45:45] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:45] Rotated to new proxy from GitHub pool | Proxy: http://91.193.58.182:80
+[2025-12-07 20:45:45] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:45] Rotated to new proxy from GitHub pool | Proxy: http://172.67.180.209:80
+[2025-12-07 20:45:46] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002171177AE90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))) | Proxy: None
+[2025-12-07 20:45:46] Rotated to new proxy from GitHub pool | Proxy: http://172.67.161.224:80
+[2025-12-07 20:45:47] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:47] Rotated to new proxy from GitHub pool | Proxy: http://104.18.219.225:80
+[2025-12-07 20:45:47] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:47] Rotated to new proxy from GitHub pool | Proxy: http://184.168.47.253:80
+[2025-12-07 20:45:48] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:48] Rotated to new proxy from GitHub pool | Proxy: http://185.162.229.147:80
+[2025-12-07 20:45:48] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:48] Rotated to new proxy from GitHub pool | Proxy: http://194.152.44.52:80
+[2025-12-07 20:45:48] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:48] Rotated to new proxy from GitHub pool | Proxy: http://104.16.160.13:80
+[2025-12-07 20:45:49] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:49] Rotated to new proxy from GitHub pool | Proxy: http://199.34.228.52:80
+[2025-12-07 20:45:49] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:49] Rotated to new proxy from GitHub pool | Proxy: http://141.193.213.205:80
+[2025-12-07 20:45:50] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:50] Rotated to new proxy from GitHub pool | Proxy: http://141.101.122.10:80
+[2025-12-07 20:45:51] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:51] Rotated to new proxy from GitHub pool | Proxy: http://185.193.28.10:80
+[2025-12-07 20:45:51] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:51] Rotated to new proxy from GitHub pool | Proxy: http://159.112.235.253:80
+[2025-12-07 20:45:51] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:45:51] Rotated to new proxy from GitHub pool | Proxy: http://199.34.229.109:80
+[2025-12-07 20:48:14] Refreshed proxy pool with 40070 proxies | Proxy: None
+[2025-12-07 20:48:15] Refreshed proxy pool with 40070 proxies | Proxy: None
+[2025-12-07 20:48:18] Rotated to new proxy from GitHub pool | Proxy: http://104.21.94.125:80
+[2025-12-07 20:48:18] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:48:18] Rotated to new proxy from GitHub pool | Proxy: http://104.16.245.239:80
+[2025-12-07 20:48:18] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:48:21] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:21] Rotated to new proxy from GitHub pool | Proxy: http://45.12.31.60:80
+[2025-12-07 20:48:21] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:21] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:21] Rotated to new proxy from GitHub pool | Proxy: http://199.34.230.238:80
+[2025-12-07 20:48:21] Rotated to new proxy from GitHub pool | Proxy: http://104.17.18.29:80
+[2025-12-07 20:48:23] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:23] Rotated to new proxy from GitHub pool | Proxy: http://45.85.118.202:80
+[2025-12-07 20:48:23] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:23] Rotated to new proxy from GitHub pool | Proxy: http://104.27.10.210:80
+[2025-12-07 20:48:23] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:23] Rotated to new proxy from GitHub pool | Proxy: http://45.12.31.82:80
+[2025-12-07 20:48:25] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:25] Rotated to new proxy from GitHub pool | Proxy: http://45.131.6.45:80
+[2025-12-07 20:48:25] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:25] Rotated to new proxy from GitHub pool | Proxy: http://141.101.122.227:80
+[2025-12-07 20:48:25] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:25] Rotated to new proxy from GitHub pool | Proxy: http://45.85.118.227:80
+[2025-12-07 20:48:26] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:26] Rotated to new proxy from GitHub pool | Proxy: http://108.162.198.245:80
+[2025-12-07 20:48:26] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:26] Rotated to new proxy from GitHub pool | Proxy: http://34.203.202.172:8080
+[2025-12-07 20:48:28] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:28] Rotated to new proxy from GitHub pool | Proxy: http://104.24.172.153:80
+[2025-12-07 20:48:29] Proxy rotation enabled via settings | Proxy: None
+[2025-12-07 20:48:30] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:30] Rotated to new proxy from GitHub pool | Proxy: http://104.26.0.105:80
+[2025-12-07 20:48:30] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:30] Rotated to new proxy from GitHub pool | Proxy: http://172.67.70.9:80
+[2025-12-07 20:48:36] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002123B7B4F50>, 'Connection to 34.203.202.172 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-07 20:48:36] Rotated to new proxy from GitHub pool | Proxy: http://185.193.28.150:80
+[2025-12-07 20:48:37] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:37] Rotated to new proxy from GitHub pool | Proxy: http://104.25.0.125:80
+[2025-12-07 20:48:38] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:38] Rotated to new proxy from GitHub pool | Proxy: http://104.18.1.89:80
+[2025-12-07 20:48:38] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:48:38] Rotated to new proxy from GitHub pool | Proxy: http://5.10.247.18:80
+[2025-12-07 20:55:05] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:05] Rotated to new proxy from GitHub pool | Proxy: http://54.183.194.246:80
+[2025-12-07 20:55:08] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021246BFB9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))) | Proxy: None
+[2025-12-07 20:55:08] Rotated to new proxy from GitHub pool | Proxy: http://164.38.155.19:80
+[2025-12-07 20:55:09] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:09] Rotated to new proxy from GitHub pool | Proxy: http://104.238.69.20:80
+[2025-12-07 20:55:12] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021246BFBB10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))) | Proxy: None
+[2025-12-07 20:55:12] Rotated to new proxy from GitHub pool | Proxy: http://141.101.115.85:80
+[2025-12-07 20:55:13] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:13] Rotated to new proxy from GitHub pool | Proxy: http://104.18.65.244:80
+[2025-12-07 20:55:14] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:14] Rotated to new proxy from GitHub pool | Proxy: http://44.203.215.34:80
+[2025-12-07 20:55:17] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response'))) | Proxy: None
+[2025-12-07 20:55:17] Rotated to new proxy from GitHub pool | Proxy: http://198.41.206.54:80
+[2025-12-07 20:55:18] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:18] Rotated to new proxy from GitHub pool | Proxy: http://216.205.52.203:80
+[2025-12-07 20:55:19] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:19] Rotated to new proxy from GitHub pool | Proxy: http://66.81.247.125:80
+[2025-12-07 20:55:22] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:22] Rotated to new proxy from GitHub pool | Proxy: http://104.17.97.181:80
+[2025-12-07 20:55:23] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:23] Rotated to new proxy from GitHub pool | Proxy: http://104.18.23.187:80
+[2025-12-07 20:55:25] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:25] Rotated to new proxy from GitHub pool | Proxy: http://160.153.0.13:80
+[2025-12-07 20:55:25] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:25] Rotated to new proxy from GitHub pool | Proxy: http://185.148.105.30:80
+[2025-12-07 20:55:26] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:26] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:26] Rotated to new proxy from GitHub pool | Proxy: http://172.67.255.224:80
+[2025-12-07 20:55:26] Rotated to new proxy from GitHub pool | Proxy: http://188.114.97.130:80
+[2025-12-07 20:55:27] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:27] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:27] Rotated to new proxy from GitHub pool | Proxy: http://104.26.13.56:80
+[2025-12-07 20:55:27] Rotated to new proxy from GitHub pool | Proxy: http://212.183.88.11:80
+[2025-12-07 20:55:28] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:28] Rotated to new proxy from GitHub pool | Proxy: http://154.197.75.189:80
+[2025-12-07 20:55:30] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:30] Rotated to new proxy from GitHub pool | Proxy: http://181.214.1.4:80
+[2025-12-07 20:55:30] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:30] Rotated to new proxy from GitHub pool | Proxy: http://45.80.111.68:80
+[2025-12-07 20:55:30] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:30] Rotated to new proxy from GitHub pool | Proxy: http://45.131.5.189:80
+[2025-12-07 20:55:40] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:40] Rotated to new proxy from GitHub pool | Proxy: http://31.43.179.169:80
+[2025-12-07 20:55:40] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:40] Rotated to new proxy from GitHub pool | Proxy: http://5.10.245.30:80
+[2025-12-07 20:55:40] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:40] Rotated to new proxy from GitHub pool | Proxy: http://173.245.49.139:80
+[2025-12-07 20:55:42] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:42] Rotated to new proxy from GitHub pool | Proxy: http://104.25.153.27:80
+[2025-12-07 20:55:43] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:43] Rotated to new proxy from GitHub pool | Proxy: http://104.16.0.21:80
+[2025-12-07 20:55:43] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:43] Rotated to new proxy from GitHub pool | Proxy: http://188.114.98.94:80
+[2025-12-07 20:55:44] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:44] Rotated to new proxy from GitHub pool | Proxy: http://45.131.4.144:80
+[2025-12-07 20:55:45] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:45] Rotated to new proxy from GitHub pool | Proxy: http://141.101.123.55:80
+[2025-12-07 20:55:45] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:55:45] Rotated to new proxy from GitHub pool | Proxy: http://23.227.39.73:80
+[2025-12-07 20:56:44] Refreshed proxy pool with 40070 proxies | Proxy: None
+[2025-12-07 20:56:46] Rotated to new proxy from GitHub pool | Proxy: http://172.67.81.79:80
+[2025-12-07 20:56:46] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:56:48] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:48] Rotated to new proxy from GitHub pool | Proxy: http://45.67.215.161:80
+[2025-12-07 20:56:48] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:48] Rotated to new proxy from GitHub pool | Proxy: http://185.18.250.60:80
+[2025-12-07 20:56:48] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:48] Rotated to new proxy from GitHub pool | Proxy: http://172.67.221.120:80
+[2025-12-07 20:56:51] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:51] Rotated to new proxy from GitHub pool | Proxy: http://104.21.239.174:80
+[2025-12-07 20:56:52] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:52] Rotated to new proxy from GitHub pool | Proxy: http://172.67.71.154:80
+[2025-12-07 20:56:52] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:52] Rotated to new proxy from GitHub pool | Proxy: http://198.41.203.47:80
+[2025-12-07 20:56:54] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:54] Rotated to new proxy from GitHub pool | Proxy: http://103.169.142.133:80
+[2025-12-07 20:56:54] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:54] Rotated to new proxy from GitHub pool | Proxy: http://188.42.89.11:80
+[2025-12-07 20:56:54] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:56:54] Rotated to new proxy from GitHub pool | Proxy: http://45.12.30.195:80
+[2025-12-07 20:58:51] Refreshed proxy pool with 40070 proxies | Proxy: None
+[2025-12-07 20:59:26] Refreshed proxy pool with 40070 proxies | Proxy: None
+[2025-12-07 20:59:28] Rotated to new proxy from GitHub pool | Proxy: http://185.148.105.191:80
+[2025-12-07 20:59:28] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 20:59:30] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:30] Rotated to new proxy from GitHub pool | Proxy: http://46.254.93.125:80
+[2025-12-07 20:59:31] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:31] Rotated to new proxy from GitHub pool | Proxy: http://141.101.115.236:80
+[2025-12-07 20:59:31] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:31] Rotated to new proxy from GitHub pool | Proxy: http://23.227.60.77:80
+[2025-12-07 20:59:32] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:32] Rotated to new proxy from GitHub pool | Proxy: http://104.16.1.228:80
+[2025-12-07 20:59:33] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:33] Rotated to new proxy from GitHub pool | Proxy: http://159.112.235.187:80
+[2025-12-07 20:59:33] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:33] Rotated to new proxy from GitHub pool | Proxy: http://173.245.49.152:80
+[2025-12-07 20:59:34] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:34] Rotated to new proxy from GitHub pool | Proxy: http://185.193.28.38:80
+[2025-12-07 20:59:35] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:35] Rotated to new proxy from GitHub pool | Proxy: http://173.245.49.83:80
+[2025-12-07 20:59:36] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 20:59:36] Rotated to new proxy from GitHub pool | Proxy: http://172.67.170.10:80
+[2025-12-07 21:00:45] Refreshed proxy pool with 40070 proxies | Proxy: None
+[2025-12-07 21:00:48] Rotated to new proxy from GitHub pool | Proxy: http://185.193.28.223:80
+[2025-12-07 21:00:48] Scheduled rotation (time interval) | Proxy: None
+[2025-12-07 21:00:50] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:50] Rotated to new proxy from GitHub pool | Proxy: http://104.18.40.205:80
+[2025-12-07 21:00:50] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:50] Rotated to new proxy from GitHub pool | Proxy: http://216.205.52.152:80
+[2025-12-07 21:00:50] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:51] Rotated to new proxy from GitHub pool | Proxy: http://104.21.43.44:80
+[2025-12-07 21:00:53] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:53] Rotated to new proxy from GitHub pool | Proxy: http://172.67.197.87:80
+[2025-12-07 21:00:54] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:54] Rotated to new proxy from GitHub pool | Proxy: http://45.80.108.17:80
+[2025-12-07 21:00:54] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:54] Rotated to new proxy from GitHub pool | Proxy: http://108.162.194.55:80
+[2025-12-07 21:00:56] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:56] Rotated to new proxy from GitHub pool | Proxy: http://206.238.237.35:80
+[2025-12-07 21:00:56] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:56] Rotated to new proxy from GitHub pool | Proxy: http://185.162.230.36:80
+[2025-12-07 21:00:56] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:00:56] Rotated to new proxy from GitHub pool | Proxy: http://103.160.204.51:80
+[2025-12-07 21:04:16] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:04:16] Rotated to new proxy from GitHub pool | Proxy: http://185.193.31.6:80
+[2025-12-07 21:04:16] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:04:16] Rotated to new proxy from GitHub pool | Proxy: http://104.18.56.114:80
+[2025-12-07 21:04:17] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-07 21:04:17] Rotated to new proxy from GitHub pool | Proxy: http://104.16.64.62:80
+[2025-12-07 21:26:55] Proxy rotation enabled via settings | Proxy: None
+[2025-12-08 05:40:42] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:40:44] Rotated to new proxy from GitHub pool | Proxy: http://45.22.209.157:8888
+[2025-12-08 05:40:44] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 05:41:06] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F34666D590>, 'Connection to 45.22.209.157 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:41:06] Rotated to new proxy from GitHub pool | Proxy: http://172.67.194.114:80
+[2025-12-08 05:41:07] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:07] Rotated to new proxy from GitHub pool | Proxy: http://156.225.72.51:80
+[2025-12-08 05:41:07] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:07] Rotated to new proxy from GitHub pool | Proxy: http://63.141.128.138:80
+[2025-12-08 05:41:09] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:09] Rotated to new proxy from GitHub pool | Proxy: http://104.17.234.57:80
+[2025-12-08 05:41:09] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:09] Rotated to new proxy from GitHub pool | Proxy: http://141.193.213.26:80
+[2025-12-08 05:41:10] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:41:10] Rotated to new proxy from GitHub pool | Proxy: http://184.168.47.77:80
+[2025-12-08 05:42:55] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:43:28] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:43:31] Rotated to new proxy from GitHub pool | Proxy: http://66.81.247.91:80
+[2025-12-08 05:43:31] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 05:43:34] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:34] Rotated to new proxy from GitHub pool | Proxy: http://45.131.6.15:80
+[2025-12-08 05:43:34] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:34] Rotated to new proxy from GitHub pool | Proxy: http://104.18.93.52:80
+[2025-12-08 05:43:34] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:34] Rotated to new proxy from GitHub pool | Proxy: http://199.34.228.104:80
+[2025-12-08 05:43:36] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:37] Rotated to new proxy from GitHub pool | Proxy: http://185.162.231.236:80
+[2025-12-08 05:43:37] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:37] Rotated to new proxy from GitHub pool | Proxy: http://104.21.124.223:80
+[2025-12-08 05:43:37] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:37] Rotated to new proxy from GitHub pool | Proxy: http://104.17.50.193:80
+[2025-12-08 05:43:39] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:39] Rotated to new proxy from GitHub pool | Proxy: http://66.235.200.223:80
+[2025-12-08 05:43:39] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:39] Rotated to new proxy from GitHub pool | Proxy: http://198.41.202.78:80
+[2025-12-08 05:43:40] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:43:40] Rotated to new proxy from GitHub pool | Proxy: http://138.186.155.2:1085
+[2025-12-08 05:46:39] Refreshed proxy pool with 41311 proxies | Proxy: None
+[2025-12-08 05:46:41] Rotated to new proxy from GitHub pool | Proxy: http://31.12.75.44:80
+[2025-12-08 05:46:41] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 05:46:43] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:43] Rotated to new proxy from GitHub pool | Proxy: http://104.21.90.186:80
+[2025-12-08 05:46:43] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:43] Rotated to new proxy from GitHub pool | Proxy: http://45.131.7.208:80
+[2025-12-08 05:46:43] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:43] Rotated to new proxy from GitHub pool | Proxy: http://103.158.155.99:8080
+[2025-12-08 05:46:56] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DE39A907D0>, 'Connection to 103.158.155.99 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:46:56] Rotated to new proxy from GitHub pool | Proxy: http://185.162.231.90:80
+[2025-12-08 05:46:56] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:56] Rotated to new proxy from GitHub pool | Proxy: http://216.205.52.179:80
+[2025-12-08 05:46:56] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:56] Rotated to new proxy from GitHub pool | Proxy: http://108.162.193.92:80
+[2025-12-08 05:46:59] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:59] Rotated to new proxy from GitHub pool | Proxy: http://104.21.30.105:80
+[2025-12-08 05:46:59] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:59] Rotated to new proxy from GitHub pool | Proxy: http://170.114.46.194:80
+[2025-12-08 05:46:59] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:46:59] Rotated to new proxy from GitHub pool | Proxy: http://198.41.205.120:80
+[2025-12-08 05:56:48] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:56:48] Rotated to new proxy from GitHub pool | Proxy: http://104.16.67.38:80
+[2025-12-08 05:56:48] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:56:48] Rotated to new proxy from GitHub pool | Proxy: http://103.177.199.97:1111
+[2025-12-08 05:56:49] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:56:49] Rotated to new proxy from GitHub pool | Proxy: http://104.16.1.72:80
+[2025-12-08 05:56:49] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:56:49] Rotated to new proxy from GitHub pool | Proxy: http://18.232.146.230:80
+[2025-12-08 05:56:58] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DE39A91A90>, 'Connection to 103.177.199.97 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:56:58] Rotated to new proxy from GitHub pool | Proxy: http://172.67.75.202:80
+[2025-12-08 05:56:59] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DE3EF77750>, 'Connection to 18.232.146.230 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:56:59] Rotated to new proxy from GitHub pool | Proxy: http://104.21.27.3:80
+[2025-12-08 05:57:02] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:02] Rotated to new proxy from GitHub pool | Proxy: http://104.17.117.229:80
+[2025-12-08 05:57:03] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DE3EF765D0>, 'Connection to 18.232.146.230 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:57:03] Rotated to new proxy from GitHub pool | Proxy: http://172.67.167.4:80
+[2025-12-08 05:57:03] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:03] Rotated to new proxy from GitHub pool | Proxy: http://172.67.177.155:80
+[2025-12-08 05:57:03] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:03] Rotated to new proxy from GitHub pool | Proxy: http://154.197.75.172:80
+[2025-12-08 05:57:03] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:03] Rotated to new proxy from GitHub pool | Proxy: http://108.162.193.208:80
+[2025-12-08 05:57:03] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:03] Rotated to new proxy from GitHub pool | Proxy: http://104.19.229.182:80
+[2025-12-08 05:57:05] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:05] Rotated to new proxy from GitHub pool | Proxy: http://104.21.224.99:80
+[2025-12-08 05:57:05] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:05] Rotated to new proxy from GitHub pool | Proxy: http://62.72.166.173:80
+[2025-12-08 05:57:05] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:05] Rotated to new proxy from GitHub pool | Proxy: http://104.25.228.44:80
+[2025-12-08 05:57:06] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:06] Rotated to new proxy from GitHub pool | Proxy: http://162.159.248.7:80
+[2025-12-08 05:57:06] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:06] Rotated to new proxy from GitHub pool | Proxy: http://122.129.84.12:8080
+[2025-12-08 05:57:07] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:07] Rotated to new proxy from GitHub pool | Proxy: http://104.18.103.56:80
+[2025-12-08 05:57:07] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:07] Rotated to new proxy from GitHub pool | Proxy: http://185.18.250.49:80
+[2025-12-08 05:57:07] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:07] Rotated to new proxy from GitHub pool | Proxy: http://108.162.193.161:80
+[2025-12-08 05:57:09] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:09] Rotated to new proxy from GitHub pool | Proxy: http://104.16.0.10:80
+[2025-12-08 05:57:09] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:09] Rotated to new proxy from GitHub pool | Proxy: http://104.19.44.224:80
+[2025-12-08 05:57:09] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:09] Rotated to new proxy from GitHub pool | Proxy: http://159.112.235.199:80
+[2025-12-08 05:57:10] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:10] Rotated to new proxy from GitHub pool | Proxy: http://104.18.185.78:80
+[2025-12-08 05:57:11] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:11] Rotated to new proxy from GitHub pool | Proxy: http://104.17.22.79:80
+[2025-12-08 05:57:11] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:11] Rotated to new proxy from GitHub pool | Proxy: http://159.112.235.132:80
+[2025-12-08 05:57:16] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DE3EF77390>, 'Connection to 122.129.84.12 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 05:57:16] Rotated to new proxy from GitHub pool | Proxy: http://185.193.29.142:80
+[2025-12-08 05:57:18] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:18] Rotated to new proxy from GitHub pool | Proxy: http://104.16.216.121:80
+[2025-12-08 05:57:18] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:18] Rotated to new proxy from GitHub pool | Proxy: http://172.67.75.255:80
+[2025-12-08 05:57:18] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 05:57:18] Rotated to new proxy from GitHub pool | Proxy: http://125.228.143.207:4145
+[2025-12-08 06:24:33] Refreshed proxy pool with 41598 proxies | Proxy: None
+[2025-12-08 06:24:56] Refreshed proxy pool with 41598 proxies | Proxy: None
+[2025-12-08 06:24:58] Rotated to new proxy from GitHub pool | Proxy: http://190.238.231.65:1994
+[2025-12-08 06:24:58] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 06:25:11] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001EFB25F25D0>, 'Connection to 190.238.231.65 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 06:25:11] Rotated to new proxy from GitHub pool | Proxy: http://172.67.70.69:80
+[2025-12-08 06:25:11] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:11] Rotated to new proxy from GitHub pool | Proxy: http://31.43.179.185:80
+[2025-12-08 06:25:11] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:11] Rotated to new proxy from GitHub pool | Proxy: http://104.19.140.105:80
+[2025-12-08 06:25:13] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:13] Rotated to new proxy from GitHub pool | Proxy: http://188.114.96.79:80
+[2025-12-08 06:25:14] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:14] Rotated to new proxy from GitHub pool | Proxy: http://185.176.26.106:80
+[2025-12-08 06:25:14] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:14] Rotated to new proxy from GitHub pool | Proxy: http://104.19.59.38:80
+[2025-12-08 06:25:16] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:16] Rotated to new proxy from GitHub pool | Proxy: http://69.84.182.167:80
+[2025-12-08 06:25:16] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:16] Rotated to new proxy from GitHub pool | Proxy: http://141.193.213.65:80
+[2025-12-08 06:25:16] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:25:16] Rotated to new proxy from GitHub pool | Proxy: http://141.101.122.179:80
+[2025-12-08 06:27:10] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:10] Rotated to new proxy from GitHub pool | Proxy: http://188.114.96.14:80
+[2025-12-08 06:27:10] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:10] Rotated to new proxy from GitHub pool | Proxy: http://188.40.57.101:80
+[2025-12-08 06:27:11] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:11] Rotated to new proxy from GitHub pool | Proxy: http://188.114.96.202:80
+[2025-12-08 06:27:12] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:12] Rotated to new proxy from GitHub pool | Proxy: http://23.227.38.130:80
+[2025-12-08 06:27:12] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:12] Rotated to new proxy from GitHub pool | Proxy: http://172.67.185.45:80
+[2025-12-08 06:27:12] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 301 Moved Permanently'))) | Proxy: None
+[2025-12-08 06:27:12] Rotated to new proxy from GitHub pool | Proxy: http://160.153.0.10:80
+[2025-12-08 06:27:14] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:14] Rotated to new proxy from GitHub pool | Proxy: http://104.21.108.188:80
+[2025-12-08 06:27:15] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:15] Rotated to new proxy from GitHub pool | Proxy: http://185.162.231.82:80
+[2025-12-08 06:27:15] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:15] Rotated to new proxy from GitHub pool | Proxy: http://104.17.230.175:80
+[2025-12-08 06:27:17] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:17] Rotated to new proxy from GitHub pool | Proxy: http://156.225.72.29:80
+[2025-12-08 06:27:17] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:17] Rotated to new proxy from GitHub pool | Proxy: http://172.67.243.79:80
+[2025-12-08 06:27:17] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:17] Rotated to new proxy from GitHub pool | Proxy: http://104.24.158.107:80
+[2025-12-08 06:27:19] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:19] Rotated to new proxy from GitHub pool | Proxy: http://104.21.224.74:80
+[2025-12-08 06:27:21] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:27:21] Rotated to new proxy from GitHub pool | Proxy: http://147.75.34.93:9480
+[2025-12-08 06:27:38] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', TimeoutError('timed out'))) | Proxy: None
+[2025-12-08 06:27:38] Rotated to new proxy from GitHub pool | Proxy: http://160.153.0.135:80
+[2025-12-08 06:33:56] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:33:56] Rotated to new proxy from GitHub pool | Proxy: http://104.18.17.143:80
+[2025-12-08 06:33:56] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:33:56] Rotated to new proxy from GitHub pool | Proxy: http://190.93.244.166:80
+[2025-12-08 06:33:56] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:33:56] Rotated to new proxy from GitHub pool | Proxy: http://195.245.221.229:80
+[2025-12-08 06:33:59] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:33:59] Rotated to new proxy from GitHub pool | Proxy: http://185.193.28.226:80
+[2025-12-08 06:33:59] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:33:59] Rotated to new proxy from GitHub pool | Proxy: http://185.162.230.108:80
+[2025-12-08 06:33:59] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:33:59] Rotated to new proxy from GitHub pool | Proxy: http://172.67.181.164:80
+[2025-12-08 06:34:02] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:34:02] Rotated to new proxy from GitHub pool | Proxy: http://104.25.112.35:80
+[2025-12-08 06:34:02] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:34:02] Rotated to new proxy from GitHub pool | Proxy: http://98.92.34.62:80
+[2025-12-08 06:34:12] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001EFB65911D0>, 'Connection to 98.92.34.62 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 06:34:12] Rotated to new proxy from GitHub pool | Proxy: http://103.160.204.248:80
+[2025-12-08 06:47:29] Refreshed proxy pool with 40498 proxies | Proxy: None
+[2025-12-08 06:47:32] Rotated to new proxy from GitHub pool | Proxy: http://45.131.211.81:80
+[2025-12-08 06:47:32] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 06:47:35] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:47:35] Rotated to new proxy from GitHub pool | Proxy: http://104.17.23.175:80
+[2025-12-08 06:47:35] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:47:35] Rotated to new proxy from GitHub pool | Proxy: http://199.68.156.100:80
+[2025-12-08 06:47:35] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:47:35] Rotated to new proxy from GitHub pool | Proxy: http://45.12.30.51:80
+[2025-12-08 06:47:37] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:47:37] Rotated to new proxy from GitHub pool | Proxy: http://104.21.80.190:80
+[2025-12-08 06:47:37] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:47:37] Rotated to new proxy from GitHub pool | Proxy: http://197.234.13.20:4145
+[2025-12-08 06:47:47] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F4F2884A50>, 'Connection to 197.234.13.20 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 06:47:47] Rotated to new proxy from GitHub pool | Proxy: http://206.189.146.13:8080
+[2025-12-08 06:47:59] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F4F117DBD0>, 'Connection to 206.189.146.13 timed out. (connect timeout=10)')) | Proxy: None
+[2025-12-08 06:47:59] Rotated to new proxy from GitHub pool | Proxy: http://45.131.209.201:80
+[2025-12-08 06:48:00] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:48:00] Rotated to new proxy from GitHub pool | Proxy: http://104.19.119.91:80
+[2025-12-08 06:48:00] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 400 Bad Request'))) | Proxy: None
+[2025-12-08 06:48:00] Rotated to new proxy from GitHub pool | Proxy: http://185.162.228.25:80
+[2025-12-08 06:57:44] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:57:45] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:57:45] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 06:57:45] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:57:59] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:57:59] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:57:59] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:57:59] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:57:59] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:57:59] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:57:59] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:57:59] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 06:57:59] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:02] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:58:02] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:02] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:58:02] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:02] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:58:02] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:02] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:02] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 06:58:02] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:04] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:58:04] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:04] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:58:04] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 06:58:04] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E758FBD90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 06:58:04] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:12] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:12] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 09:00:12] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:13] Proxy failed on attempt 1: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BF9D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:13] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:13] Proxy failed on attempt 2: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BDD10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:13] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:13] Proxy failed on attempt 3: HTTPSConnectionPool(host='www.livepriceofgold.com', port=443): Max retries exceeded with url: /sri-lanka-gold-price.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BF110>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:13] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:13] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:13] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 09:00:13] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:15] Proxy failed on attempt 1: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BF110>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:15] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:15] Proxy failed on attempt 2: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BDD10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:15] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:15] Proxy failed on attempt 3: HTTPSConnectionPool(host='ceypetco.gov.lk', port=443): Max retries exceeded with url: /marketing-sales/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BF9D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:15] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:15] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:15] Scheduled rotation (time interval) | Proxy: None
+[2025-12-08 09:00:15] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:29] Proxy failed on attempt 1: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BF9D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:29] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:29] Proxy failed on attempt 2: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BDBD0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:29] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 09:00:29] Proxy failed on attempt 3: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=DDOE02LKA086NWDB (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020E759BD950>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Proxy: None
+[2025-12-08 09:00:29] Failed to refresh proxy pool | Proxy: None
+[2025-12-08 15:31:37] Proxy rotation enabled via settings | Proxy: None
+[2025-12-08 15:31:51] Proxy rotation disabled via settings | Proxy: None

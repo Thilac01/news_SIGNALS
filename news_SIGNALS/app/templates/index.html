@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<section class="stats-grid">
+    <div class="card stat-card">
+        <div class="icon-box risk"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div class="stat-info">
+            <h3>High Risk</h3>
+            <p id="stat-risk">--</p>
+        </div>
+    </div>
+    <div class="card stat-card">
+        <div class="icon-box opportunity"><i class="fa-solid fa-arrow-trend-up"></i></div>
+        <div class="stat-info">
+            <h3>Opportunities</h3>
+            <p id="stat-opportunity">--</p>
+        </div>
+    </div>
+    <div class="card stat-card">
+        <div class="icon-box event"><i class="fa-solid fa-bell"></i></div>
+        <div class="stat-info">
+            <h3>Major Events</h3>
+            <p id="stat-events">--</p>
+        </div>
+    </div>
+    <div class="card stat-card">
+        <div class="icon-box total"><i class="fa-solid fa-newspaper"></i></div>
+        <div class="stat-info">
+            <h3>Total Articles</h3>
+            <p id="stat-total">--</p>
+        </div>
+    </div>
+</section>
+
+<section class="signals-grid"
+    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+    <!-- National Activity Indicators -->
+    <div class="card signal-card" style="border-top: 4px solid var(--accent);">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-flag" style="color: var(--accent);"></i> National Activity
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Major events and topics gaining traction in the public space.
+        </p>
+        <div id="list-national" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Operational Environment Indicators -->
+    <div class="card signal-card" style="border-top: 4px solid #3b82f6;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-briefcase" style="color: #3b82f6;"></i> Operational Environment
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Conditions affecting business operations or customer behavior.
+        </p>
+        <div id="list-operational" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Risk & Opportunity Insights -->
+    <div class="card signal-card" style="border-top: 4px solid #10b981;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-chart-line" style="color: #10b981;"></i> Risk & Opportunity
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Early warnings and emerging positive trends.
+        </p>
+        <div id="list-risk" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+
+    <!-- New Cards -->
+
+    <!-- Transport & Mobility -->
+    <div class="card signal-card" style="border-top: 4px solid #f97316;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-truck-fast" style="color: #f97316;"></i> Transport & Mobility
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Traffic, public transport status, and infrastructure.
+        </p>
+        <div id="list-transport" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Weather & Natural Hazards -->
+    <div class="card signal-card" style="border-top: 4px solid #8b5cf6;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-cloud-bolt" style="color: #8b5cf6;"></i> Weather & Hazards
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Weather alerts, natural disasters, and environmental issues.
+        </p>
+        <div id="list-weather" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Economic Indicators -->
+    <div class="card signal-card" style="border-top: 4px solid #eab308;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-sack-dollar" style="color: #eab308;"></i> Economic Indicators
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Market trends, currency fluctuations, and business updates.
+        </p>
+        <div id="list-economy" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Public Sentiment -->
+    <div class="card signal-card" style="border-top: 4px solid #ec4899;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-users-viewfinder" style="color: #ec4899;"></i> Public Sentiment
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Social media trends, public opinion, and civil unrest.
+        </p>
+        <div id="list-sentiment" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Energy & Utilities -->
+    <div class="card signal-card" style="border-top: 4px solid #06b6d4;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+            <i class="fa-solid fa-bolt" style="color: #06b6d4;"></i> Energy & Utilities
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Power status, fuel availability, and utility services.
+        </p>
+        <div id="list-energy" class="signal-list">
+            <div class="loading-sm">Loading...</div>
+        </div>
+    </div>
+</section>
+
+<section class="dashboard-grid">
+    <div class="card chart-card">
+        <h2>Impact Distribution</h2>
+        <canvas id="impactChart"></canvas>
+    </div>
+    <div class="card chart-card">
+        <h2>Operational Categories</h2>
+        <canvas id="opsChart"></canvas>
+    </div>
+</section>
+
+<section class="market-section">
+    <h2><i class="fa-solid fa-chart-line"></i> Live Market Data</h2>
+
+    <div class="market-controls" style="margin-bottom: 1.5rem;">
+        <select id="market-selector" class="market-dropdown">
+            <option value="usd-lkr">USD / LKR Exchange Rate</option>
+            <option value="gold">Gold Price (24K per gram)</option>
+            <option value="fuel">Fuel Prices</option>
+            <option value="inflation">Consumer Price Index (CPI)</option>
+        </select>
+        <button id="market-refresh-btn" class="btn-refresh" style="margin-left: 1rem;">
+            <i class="fa-solid fa-rotate"></i> Update
+        </button>
+    </div>
+
+    <div class="card market-card">
+        <div class="market-value-container">
+            <h3 id="market-title">USD / LKR Exchange Rate</h3>
+            <div id="market-current-value" class="market-value">Loading...</div>
+            <div id="market-subtitle" class="market-subtitle"></div>
+        </div>
+        <div class="market-chart-container">
+            <canvas id="marketChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- Detail Modal -->
+<div id="detail-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-title">Details</h2>
+        <div id="modal-body">
+            <!-- Content injected by JS -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Dashboard specific logic is already in main.js, but we might need to scope it if we split pages.
+    // For now, main.js handles the dashboard elements if they exist.
+</script>
+{% endblock %}

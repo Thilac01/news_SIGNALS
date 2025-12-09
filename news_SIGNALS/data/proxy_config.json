@@ -1,0 +1,14 @@
+{
+  "enabled": false,
+  "proxy_api_endpoint": "https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=nhuyjukilompnbvfrtyuui&type=getproxies&country[]=all&protocol=http&format=normal&status=all",
+  "api_key": "nhuyjukilompnbvfrtyuui",
+  "rotation_interval_hours": 1,
+  "auto_switch_on_block": true,
+  "auto_switch_on_403": true,
+  "auto_switch_on_429": true,
+  "auto_switch_on_503": true,
+  "auto_switch_on_captcha": true,
+  "use_random_user_agents": true,
+  "request_delay_min": 1,
+  "request_delay_max": 3
+}

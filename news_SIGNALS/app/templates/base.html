@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Signal Monitor | {% block title %}Dashboard{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-radar"></i>
+                <span>SignalMon</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="{{ 'active' if request.endpoint == 'main.index' else '' }}">
+                        <a href="{{ url_for('main.index') }}"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                    </li>
+                    <li class="{{ 'active' if request.endpoint == 'main.live_feed' else '' }}">
+                        <a href="{{ url_for('main.live_feed') }}"><i class="fa-solid fa-globe"></i> Live Feed</a>
+                    </li>
+                    <li class="{{ 'active' if request.endpoint == 'main.clusters' else '' }}">
+                        <a href="{{ url_for('main.clusters') }}"><i class="fa-solid fa-layer-group"></i> Clusters</a>
+                    </li>
+                    <li class="{{ 'active' if request.endpoint == 'main.location_map' else '' }}">
+                        <a href="{{ url_for('main.location_map') }}"><i class="fa-solid fa-map-location-dot"></i>
+                            Map</a>
+                    </li>
+                    <li class="{{ 'active' if request.endpoint == 'main.raw_data' else '' }}">
+                        <a href="{{ url_for('main.raw_data') }}"><i class="fa-solid fa-database"></i> Raw Data</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="settings {{ 'active' if request.endpoint == 'main.settings' else '' }}">
+                <a href="{{ url_for('main.settings') }}"><i class="fa-solid fa-gear"></i> Settings</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>{% block header_title %}Situational Awareness Dashboard{% endblock %}</h1>
+                <div class="header-controls" style="display: flex; align-items: center; gap: 20px;">
+                    <!-- Time Widget -->
+                    <div id="header-clock"
+                        style="text-align: right; line-height: 1.2; display: none; margin-right: 10px;">
+                        <div id="clock-time"
+                            style="font-size: 1.1rem; font-weight: 700; font-variant-numeric: tabular-nums;">--:--</div>
+                        <div id="clock-date" style="font-size: 0.75rem; color: var(--text-secondary);">--</div>
+                    </div>
+
+                    <!-- Export Button -->
+                    <button id="btn-export" class="ios-btn secondary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Export
+                    </button>
+
+                    <!-- Notification Bell -->
+                    <div class="icon-btn-wrapper" style="position: relative;">
+                        <button class="ios-icon-btn">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <span class="notification-dot"></span>
+                    </div>
+
+                    <div class="divider-vertical"></div>
+
+                    <!-- Status Pill -->
+                    <div class="status-pill active">
+                        <span class="dot pulse"></span>
+                        <span>Live</span>
+                    </div>
+                </div>
+            </header>
+
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>
